@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import LandingPage from './LandingPage';
-import RoleSelection from './RoleSelection';
-import UserLogin from './UserLogin';
-import AdminLogin from './AdminLogin';
-import RegisterUser from './RegisterUser';
+import LandingPage from './pages/LandingPage';
+import RoleSelection from './pages/RoleSelection';
+import UserLogin from './pages/UserLogin';
+import AdminLogin from './pages/AdminLogin';
+import RegisterUser from './pages/RegisterUser';
 import './App.css';
 
 function App() {
