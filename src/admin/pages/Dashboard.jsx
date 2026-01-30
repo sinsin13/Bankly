@@ -41,7 +41,7 @@ export default function Dashboard() {
       }));
 
       const approvals = Array.from({ length: 8 });
-      const transactions = Array.from({ length: 52 });
+      const transactions = Array.from({ length: 20 });
 
       setStats({
         totalCustomers: customers.length,
