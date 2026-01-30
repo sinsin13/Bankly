@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 export default function AdminLogin() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -17,6 +18,7 @@ export default function AdminLogin() {
   };
 
   return (
+
     <div className="min-h-screen w-full bg-gradient-to-br from-blue-600 to-blue-500 flex items-center justify-center relative">
       
       {/* Top Left Logo */}
@@ -31,6 +33,8 @@ export default function AdminLogin() {
       >
         ← Go Back
       </button>
+<div className="opacity-0 animate-zoomIn">
+
 
       {/* Login Card */}
       <form
@@ -77,6 +81,11 @@ export default function AdminLogin() {
           LOGIN
         </button>
       </form>
+        
+</div>
     </div>
+
+
+
   );
 }
