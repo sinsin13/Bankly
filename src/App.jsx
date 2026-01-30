@@ -5,8 +5,8 @@ import RoleSelection from './pages/RoleSelection';
 import UserLogin from './pages/UserLogin';
 import AdminLogin from './pages/AdminLogin';
 import RegisterUser from './pages/RegisterUser';
-// admin auth
-// import AdminLogin from "./admin/auth/AdminLogin";
+import Productselection from './pages/Productselection';
+
 
 // admin layout + pages
 import AdminLayout from "./admin/layout/AdminLayout";
@@ -26,6 +26,9 @@ function App() {
         <Route path="/user-login" element={<UserLogin />} />
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/register" element={<RegisterUser />} />
+        <Route path="/product-selection" element={<Productselection />} />
+  
+        
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="customers" element={<Customers />} />
