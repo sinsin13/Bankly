@@ -62,7 +62,7 @@ export default function Customers() {
         <h2 className="text-lg font-semibold">All Customers</h2>
       </div>
   
-      {/* TABLE WRAPPER (THIS IS THE KEY FIX) */}
+      {/* //TABLE WRAPPER */}
       <div className="p-6">
         <table className="w-full text-sm">
           <thead>

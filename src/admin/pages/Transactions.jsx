@@ -15,7 +15,7 @@ export default function Transactions() {
       setTxns(res.data);
     } catch {
       setTxns(
-        Array.from({ length: 30 }, (_, i) => ({
+        Array.from({ length: 20 }, (_, i) => ({
           id: i,
           customer: `Customer ${i + 1}`,
           type: i % 2 === 0 ? "Credit" : "Debit",
