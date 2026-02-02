@@ -6,17 +6,29 @@ function UserLogin() {
   const [customerId, setCustomerId] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (customerId && password) {
-      // Set user token in localStorage
-      localStorage.setItem('userToken', 'dummy-user-token');
+      // TODO: Authenticate with backend and get user data
+      // const response = await api.post('/login', { customerId, password });
+      // const userData = response.data;
       
-      // Store default user info if not already present
-      if (!localStorage.getItem('userName')) {
-        localStorage.setItem('userName', 'User');
-      }
+      // For now, use dummy data
+      const userData = {
+        token: 'dummy-user-token',
+        name: 'Test User',
+        phone: '+91 9876543210',
+        customerId: customerId,
+        kycStatus: 'not_started' // not_started, pending, approved
+      };
+      
+      // Set user token and data in localStorage
+      localStorage.setItem('userToken', userData.token);
+      localStorage.setItem('userName', userData.name);
+      localStorage.setItem('userPhone', userData.phone);
+      localStorage.setItem('customerId', userData.customerId);
+      localStorage.setItem('kycStatus', userData.kycStatus);
       
       // Navigate to product selection
       navigate('/product-selection');

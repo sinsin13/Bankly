@@ -92,7 +92,8 @@ function KYCFlow() {
     if (currentStep < 4) {
       setCurrentStep(currentStep + 1);
     } else {
-      // Submit application
+      // Submit application and set status to pending
+      localStorage.setItem('kycStatus', 'pending');
       setCurrentStep(5);
     }
   };
@@ -643,7 +644,7 @@ function KYCFlow() {
 
                 <h2 className="text-3xl font-bold mb-4">Application Submitted Successfully</h2>
                 <p className="text-gray-600 mb-8">
-                  Thank you for choosing Bankly. Your application has been received.
+                  Thank you for choosing Nexus Bank. Your application has been received.
                 </p>
 
                 <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8 text-left">

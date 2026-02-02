@@ -5,8 +5,9 @@ import LandingPage from './pages/LandingPage';
 import RoleSelection from './pages/RoleSelection';
 import UserLogin from './pages/UserLogin';
 import RegisterUser from './pages/RegisterUser';
-import ProductSelection from './pages/ProductSelection';
+import ProductSelection from './pages/Productselection';
 import KYCFlow from './pages/KYCFlow';
+import AccountCreation from './pages/Accountcreation';
 
 // Admin pages
 import AdminLogin from './pages/AdminLogin';
@@ -47,6 +48,15 @@ function App() {
         element={
           <RequireUserAuth>
             <KYCFlow />
+          </RequireUserAuth>
+        } 
+      />
+      
+      <Route 
+        path="/account-creation" 
+        element={
+          <RequireUserAuth>
+            <AccountCreation />
           </RequireUserAuth>
         } 
       />

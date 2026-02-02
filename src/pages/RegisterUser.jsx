@@ -19,7 +19,7 @@ function RegisterUser() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (formData.password !== formData.confirmPassword) {
@@ -27,15 +27,16 @@ function RegisterUser() {
       return;
     }
     
-    // Set user token and store user data
-    localStorage.setItem('userToken', 'dummy-user-token');
-    localStorage.setItem('userName', formData.name);
-    localStorage.setItem('userPhone', formData.phone);
+    // TODO: Send registration data to backend
+    // const response = await api.post('/register', formData);
     
     console.log('Registration Data:', formData);
     
-    // Navigate to product selection
-    navigate('/product-selection');
+    // Show success message
+    alert('Registration successful! Please login to continue.');
+    
+    // Navigate to login page
+    navigate('/user-login');
   };
 
   return (
