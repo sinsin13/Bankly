@@ -10,8 +10,6 @@ function RegisterUser() {
     password: '',
     confirmPassword: ''
   });
-  const [errors, setErrors] = useState({});
-  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -19,71 +17,25 @@ function RegisterUser() {
       ...prev,
       [name]: value
     }));
-    // Clear error for this field when user types
-    if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }));
-    }
   };
 
-  const validateForm = () => {
-    const newErrors = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
-
-    if (!formData.phone.trim()) {
-      newErrors.phone = 'Phone is required';
-    } else if (!/^[0-9]{10}$/.test(formData.phone)) {
-      newErrors.phone = 'Phone must be 10 digits';
-    }
-
-    if (!formData.password) {
-      newErrors.password = 'Password is required';
-    } else if (formData.password.length < 6) {
-      newErrors.password = 'Password must be at least 6 characters';
-    }
-
-    if (!formData.confirmPassword) {
-      newErrors.confirmPassword = 'Please confirm password';
-    } else if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = 'Passwords do not match';
-    }
-
-    return newErrors;
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
-    const validationErrors = validateForm();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
+    if (formData.password !== formData.confirmPassword) {
+      alert('Passwords do not match!');
       return;
     }
-
-    setLoading(true);
-
-    try {
-      // TODO: Replace with actual API call
-      // const response = await api.post('/auth/register', formData);
-      
-      // Simulating API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      console.log('Registration Data:', formData);
-      
-      // After successful registration, log the user in
-      localStorage.setItem('userToken', 'dummy-user-token');
-      localStorage.setItem('userName', formData.name);
-      
-      // Navigate to product selection
-      navigate('/product-selection');
-    } catch (err) {
-      setErrors({ submit: 'Registration failed. Please try again.' });
-    } finally {
-      setLoading(false);
-    }
+    
+    // Set user token and store user data
+    localStorage.setItem('userToken', 'dummy-user-token');
+    localStorage.setItem('userName', formData.name);
+    localStorage.setItem('userPhone', formData.phone);
+    
+    console.log('Registration Data:', formData);
+    
+    // Navigate to product selection
+    navigate('/product-selection');
   };
 
   return (
@@ -108,12 +60,6 @@ function RegisterUser() {
           Sign Up
         </h2>
 
-        {errors.submit && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4 text-sm">
-            {errors.submit}
-          </div>
-        )}
-
         <form onSubmit={handleSubmit}>
           {/* Name */}
           <div className="mb-5">
@@ -125,13 +71,10 @@ function RegisterUser() {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              disabled={loading}
-              className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none disabled:opacity-50"
+              required
+              className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
               placeholder="Enter your full name"
             />
-            {errors.name && (
-              <p className="text-red-600 text-xs mt-1">{errors.name}</p>
-            )}
           </div>
 
           {/* Phone */}
@@ -144,14 +87,10 @@ function RegisterUser() {
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              disabled={loading}
-              className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none disabled:opacity-50"
-              placeholder="Enter 10-digit phone number"
-              maxLength={10}
+              required
+              className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
+              placeholder="+91 98765 43210"
             />
-            {errors.phone && (
-              <p className="text-red-600 text-xs mt-1">{errors.phone}</p>
-            )}
           </div>
 
           {/* Create Password */}
@@ -164,13 +103,10 @@ function RegisterUser() {
               name="password"
               value={formData.password}
               onChange={handleInputChange}
-              disabled={loading}
-              className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none disabled:opacity-50"
-              placeholder="At least 6 characters"
+              required
+              className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
+              placeholder="Create a strong password"
             />
-            {errors.password && (
-              <p className="text-red-600 text-xs mt-1">{errors.password}</p>
-            )}
           </div>
 
           {/* Confirm Password */}
@@ -183,22 +119,18 @@ function RegisterUser() {
               name="confirmPassword"
               value={formData.confirmPassword}
               onChange={handleInputChange}
-              disabled={loading}
-              className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none disabled:opacity-50"
-              placeholder="Re-enter your password"
+              required
+              className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
+              placeholder="Confirm your password"
             />
-            {errors.confirmPassword && (
-              <p className="text-red-600 text-xs mt-1">{errors.confirmPassword}</p>
-            )}
           </div>
 
           {/* Register Button */}
           <button 
             type="submit"
-            disabled={loading}
-            className="w-full py-3.5 bg-green-500 text-white rounded-lg text-base font-bold hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 tracking-wider disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+            className="w-full py-3.5 bg-green-500 text-white rounded-lg text-base font-bold hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 tracking-wider"
           >
-            {loading ? 'REGISTERING...' : 'REGISTER'}
+            REGISTER
           </button>
         </form>
       </div>

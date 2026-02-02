@@ -1,22 +1,14 @@
-import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Bell, User } from 'lucide-react';
 
 function ProductSelection() {
   const navigate = useNavigate();
-  const [userName, setUserName] = useState('User');
-
-  useEffect(() => {
-    // Get user name from localStorage
-    const storedName = localStorage.getItem('userName');
-    if (storedName) {
-      setUserName(storedName);
-    }
-  }, []);
+  const userName = localStorage.getItem('userName') || 'User';
 
   const handleLogout = () => {
     localStorage.removeItem("userToken");
     localStorage.removeItem("userName");
+    localStorage.removeItem("userPhone");
     navigate("/");
   };
 
@@ -79,14 +71,14 @@ function ProductSelection() {
               </div>
               <div className="text-sm">
                 <p className="font-semibold text-base">{userName}</p>
-                <p className="text-gray-500 text-sm">Customer</p>
+                <p className="text-gray-500 text-sm">User</p>
               </div>
             </div>
           </div>
         </header>
 
         {/* Products Content */}
-        <main className="flex-1 p-12 overflow-y-auto">
+        <main className="flex-1 p-12">
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-5xl font-bold text-black mb-4">
@@ -101,7 +93,7 @@ function ProductSelection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             
             {/* Open Bank Account Card */}
-            <div className="bg-gradient-to-br from-blue-300 to-blue-200 rounded-3xl p-10 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+            <div className="bg-gradient-to-br from-blue-300 to-blue-200 rounded-3xl p-10 flex flex-col items-center text-center shadow-lg hover:shadow-xl transition-all">
               <div className="w-40 h-40 bg-white rounded-full flex items-center justify-center mb-8">
                 <svg 
                   width="120" 
@@ -127,13 +119,21 @@ function ProductSelection() {
                 Zero balance savings and current accounts
               </p>
 
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all hover:shadow-xl">
+              <button 
+                onClick={() => {
+                  console.log("Open account now clicked");
+                  console.log("Current userToken:", localStorage.getItem('userToken'));
+                  console.log("Current userName:", localStorage.getItem('userName'));
+                  navigate('/kyc-flow');
+                }}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all hover:shadow-xl"
+              >
                 Open account now
               </button>
             </div>
 
             {/* Apply for Loan Card */}
-            <div className="bg-gradient-to-br from-blue-300 to-blue-200 rounded-3xl p-10 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+            <div className="bg-gradient-to-br from-blue-300 to-blue-200 rounded-3xl p-10 flex flex-col items-center text-center shadow-lg hover:shadow-xl transition-all">
               <div className="w-40 h-40 bg-white rounded-full flex items-center justify-center mb-8">
                 <svg 
                   width="100" 
