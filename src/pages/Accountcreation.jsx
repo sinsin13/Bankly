@@ -37,7 +37,7 @@ function AccountCreation() {
     
     // Redirect after 3 seconds
     setTimeout(() => {
-      navigate('/product-selection');
+      navigate('/user/dashboard');
     }, 3000);
   };
 

@@ -17,6 +17,13 @@ import Customers from "./admin/pages/Customers";
 import Approvals from "./admin/pages/Approvals";
 import Transactions from "./admin/pages/Transactions";
 
+/* USER */
+import UserLayout from "./user/layout/UserLayout";
+import UserDashboard from "./user/pages/UserDashboard";
+import Accounts from "./user/pages/Accounts";
+import TransactionsPage from "./user/pages/Transactions";
+import FundTransfer from "./user/pages/FundTransfer";
+
 // Auth protection
 import RequireAdminAuth from './routes/RequireAdminAuth';
 import RequireUserAuth from './routes/RequireUserAuth';
@@ -76,6 +83,14 @@ function App() {
         <Route path="approvals" element={<Approvals />} />
         <Route path="transactions" element={<Transactions />} />
       </Route>
+      
+      <Route path="/user" element={<UserLayout />}>
+          <Route index element={<UserDashboard />} />
+          <Route path="dashboard" element={<UserDashboard />} />
+          <Route path="accounts" element={<Accounts />} />
+          <Route path="transactions" element={<TransactionsPage />} />
+          <Route path="transfer" element={<FundTransfer />} />
+        </Route>
 
       {/* 404 Fallback */}
       <Route path="*" element={<Navigate to="/" replace />} />
