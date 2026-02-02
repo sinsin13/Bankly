@@ -15,6 +15,13 @@ import Customers from "./admin/pages/Customers";
 import Approvals from "./admin/pages/Approvals";
 import Transactions from "./admin/pages/Transactions";
 
+/* USER */
+import UserLayout from "./user/layout/UserLayout";
+import UserDashboard from "./user/pages/UserDashboard";
+import Accounts from "./user/pages/Accounts";
+import TransactionsPage from "./user/pages/Transactions";
+import FundTransfer from "./user/pages/FundTransfer";
+
 import './App.css';
 
 function App() {
@@ -34,6 +41,14 @@ function App() {
           <Route path="customers" element={<Customers />} />
           <Route path="approvals" element={<Approvals />} />
           <Route path="transactions" element={<Transactions />} />
+        </Route>
+
+        <Route path="/user" element={<UserLayout />}>
+          <Route index element={<UserDashboard />} />
+          <Route path="dashboard" element={<UserDashboard />} />
+          <Route path="accounts" element={<Accounts />} />
+          <Route path="transactions" element={<TransactionsPage />} />
+          <Route path="transfer" element={<FundTransfer />} />
         </Route>
       </Routes>
     </BrowserRouter>
