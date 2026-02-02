@@ -1,63 +1,114 @@
-import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function AdminLogin() {
+export default function AdminLogin() {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setError("");
+
+    if (!email || !password) {
+      setError("Please enter both Admin ID and Password");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      // TODO: Replace with actual API call
+      // const response = await api.post('/auth/admin/login', { email, password });
+      
+      // Simulating API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      // Store token and admin info
+      localStorage.setItem("adminToken", "dummy-admin-token");
+      localStorage.setItem("adminName", email.split('@')[0] || "Admin");
+      
+      // Navigate to dashboard
+      navigate("/admin/dashboard");
+    } catch (err) {
+      setError("Invalid credentials. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-[#187cff] text-white flex flex-col items-center justify-center p-5">
-      {/* Logo */}
-      <div className="absolute top-6 left-16 text-xl font-bold">
+    <div className="min-h-screen w-full bg-gradient-to-br from-blue-600 to-blue-500 flex items-center justify-center relative">
+      
+      {/* Top Left Logo */}
+      <div className="absolute top-6 left-10 text-white text-xl font-bold">
         Bank.ly
       </div>
 
-      {/* Go Back Button */}
-      <button 
-        onClick={() => navigate('/role-selection')}
-        className="absolute top-6 right-16 bg-white text-blue-900 px-5 py-2.5 rounded-md text-sm font-semibold hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 shadow-md"
+      {/* Top Right Go Back */}
+      <button
+        onClick={() => navigate("/role-selection")}
+        className="absolute top-6 right-10 bg-white text-blue-700 px-5 py-2 rounded-lg font-semibold shadow hover:scale-105 transition"
       >
         ← Go Back
       </button>
 
       {/* Login Card */}
-      <div className="bg-[#E6F0FF] rounded-3xl px-14 py-12 w-full max-w-md shadow-2xl opacity-0 animate-zoomIn" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
-        <h2 className="text-3xl font-bold text-black text-center mb-8">
-          Welcome Back
+      <form
+        onSubmit={handleLogin}
+        className="bg-blue-50/90 backdrop-blur-md rounded-2xl shadow-2xl px-10 py-12 w-[420px]"
+      >
+        <h2 className="text-3xl font-bold text-center mb-10 text-black">
+          Admin Login
         </h2>
 
-        <form onSubmit={(e) => e.preventDefault()}>
-          {/* Admin ID */}
-          <div className="mb-5">
-            <label className="block text-sm font-semibold text-black mb-2">
-              Admin ID
-            </label>
-            <input 
-              type="text"
-              className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
-            />
+        {error && (
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4 text-sm">
+            {error}
           </div>
+        )}
 
-          {/* Password */}
-          <div className="mb-7">
-            <label className="block text-sm font-semibold text-black mb-2">
-              Password
-            </label>
-            <input 
-              type="password"
-              className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
-            />
-          </div>
+        {/* Admin ID */}
+        <div className="mb-6">
+          <label className="block text-sm font-semibold mb-2 text-black">
+            Admin ID
+          </label>
+          <input
+            type="text"
+            className="w-full px-4 py-3 rounded-lg outline-none disabled:opacity-50"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            disabled={loading}
+            placeholder="Enter your admin ID"
+          />
+        </div>
 
-          {/* Login Button */}
-          <button 
-            type="submit"
-            className="w-full py-3.5 bg-blue-500 text-white rounded-lg text-base font-bold hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/40 transition-all duration-300 tracking-wider"
-          >
-            LOGIN
-          </button>
-        </form>
-      </div>
+        {/* Password */}
+        <div className="mb-8">
+          <label className="block text-sm font-semibold mb-2 text-black">
+            Password
+          </label>
+          <input
+            type="password"
+            className="w-full px-4 py-3 rounded-lg outline-none disabled:opacity-50"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            disabled={loading}
+            placeholder="Enter your password"
+          />
+        </div>
+
+        {/* Login Button */}
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg font-bold text-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {loading ? 'LOGGING IN...' : 'LOGIN'}
+        </button>
+      </form>
     </div>
   );
 }
-
-export default AdminLogin;

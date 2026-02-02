@@ -45,7 +45,7 @@ function RoleSelection() {
 
           {/* ADMIN Card */}
           <div 
-            onClick={() => navigate('/admin-login')}
+            onClick={() => navigate('/admin/login')}
             className="bg-white rounded-3xl p-16 min-w-[240px] cursor-pointer hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 shadow-xl opacity-0 animate-zoomIn"
             style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}
           >

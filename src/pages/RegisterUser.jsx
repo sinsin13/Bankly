@@ -1,55 +1,89 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ProgressIndicator from '../components/ProgressIndicator';
 
 function RegisterUser() {
   const navigate = useNavigate();
-  const [currentStep, setCurrentStep] = useState(1);
   
   const [formData, setFormData] = useState({
     name: '',
-    dob: '',
-    mobile: '',
-    email: '',
-    address: '',
-    city: '',
-    state: '',
-    zipCode: '',
-    proofId: '',
-    idNo: '',
+    phone: '',
     password: '',
-    confirmPassword: '',
-    agreeTerms: false,
-    agreePrivacy: false
+    confirmPassword: ''
   });
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: value
     }));
-  };
-
-  const handleNext = () => {
-    if (currentStep < 3) {
-      setCurrentStep(currentStep + 1);
+    // Clear error for this field when user types
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }));
     }
   };
 
-  const handleBack = () => {
-    if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);
-    } else {
-      navigate('/');
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
     }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone is required';
+    } else if (!/^[0-9]{10}$/.test(formData.phone)) {
+      newErrors.phone = 'Phone must be 10 digits';
+    }
+
+    if (!formData.password) {
+      newErrors.password = 'Password is required';
+    } else if (formData.password.length < 6) {
+      newErrors.password = 'Password must be at least 6 characters';
+    }
+
+    if (!formData.confirmPassword) {
+      newErrors.confirmPassword = 'Please confirm password';
+    } else if (formData.password !== formData.confirmPassword) {
+      newErrors.confirmPassword = 'Passwords do not match';
+    }
+
+    return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Registration Data:', formData);
-    alert('Registration Successful! (Data will be saved to database in future)');
-    navigate('/role-selection');
+    
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      // TODO: Replace with actual API call
+      // const response = await api.post('/auth/register', formData);
+      
+      // Simulating API call
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      console.log('Registration Data:', formData);
+      
+      // After successful registration, log the user in
+      localStorage.setItem('userToken', 'dummy-user-token');
+      localStorage.setItem('userName', formData.name);
+      
+      // Navigate to product selection
+      navigate('/product-selection');
+    } catch (err) {
+      setErrors({ submit: 'Registration failed. Please try again.' });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -59,259 +93,113 @@ function RegisterUser() {
         Bank.ly
       </div>
 
+      {/* Go Back Button */}
+      <button 
+        onClick={() => navigate('/')}
+        className="absolute top-6 right-16 bg-white text-blue-900 px-5 py-2.5 rounded-md text-sm font-semibold hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 shadow-md"
+      >
+        ← Go Back
+      </button>
+
       {/* Registration Card */}
-      <div className="bg-[#E6F0FF] rounded-3xl px-14 py-12 w-full max-w-xl shadow-2xl opacity-0 animate-zoomIn" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
+      <div className="bg-[#E6F0FF] rounded-3xl px-14 py-12 w-full max-w-md shadow-2xl opacity-0 animate-zoomIn" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
         {/* Title */}
-        <h2 className="text-3xl font-bold text-black text-center mb-2">
-          {currentStep === 1 && 'Personal Details'}
-          {currentStep === 2 && 'Residential Address'}
-          {currentStep === 3 && 'Identity & Security'}
+        <h2 className="text-3xl font-bold text-black text-center mb-8">
+          Sign Up
         </h2>
 
-        {/* Progress Indicator */}
-        <ProgressIndicator currentStep={currentStep} />
+        {errors.submit && (
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4 text-sm">
+            {errors.submit}
+          </div>
+        )}
 
         <form onSubmit={handleSubmit}>
-          {/* Step 1: Personal Details */}
-          {currentStep === 1 && (
-            <>
-              <div className="mb-5">
-                <label className="block text-sm font-semibold text-black mb-2">
-                  Name :
-                </label>
-                <input 
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
-                />
-              </div>
-
-              <div className="mb-5">
-                <label className="block text-sm font-semibold text-black mb-2">
-                  DOB :
-                </label>
-                <input 
-                  type="date"
-                  name="dob"
-                  value={formData.dob}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
-                />
-              </div>
-
-              <div className="mb-5">
-                <label className="block text-sm font-semibold text-black mb-2">
-                  Mobile :
-                </label>
-                <input 
-                  type="tel"
-                  name="mobile"
-                  value={formData.mobile}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
-                />
-              </div>
-
-              <div className="mb-5">
-                <label className="block text-sm font-semibold text-black mb-2">
-                  Email :
-                </label>
-                <input 
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
-                />
-              </div>
-            </>
-          )}
-
-          {/* Step 2: Residential Address */}
-          {currentStep === 2 && (
-            <>
-              <div className="mb-5">
-                <label className="block text-sm font-semibold text-black mb-2">
-                  Address :
-                </label>
-                <input 
-                  type="text"
-                  name="address"
-                  value={formData.address}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
-                />
-              </div>
-
-              <div className="mb-5">
-                <label className="block text-sm font-semibold text-black mb-2">
-                  City :
-                </label>
-                <input 
-                  type="text"
-                  name="city"
-                  value={formData.city}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
-                />
-              </div>
-
-              <div className="mb-5">
-                <label className="block text-sm font-semibold text-black mb-2">
-                  State :
-                </label>
-                <input 
-                  type="text"
-                  name="state"
-                  value={formData.state}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
-                />
-              </div>
-
-              <div className="mb-5">
-                <label className="block text-sm font-semibold text-black mb-2">
-                  Zip Code :
-                </label>
-                <input 
-                  type="text"
-                  name="zipCode"
-                  value={formData.zipCode}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
-                />
-              </div>
-            </>
-          )}
-
-          {/* Step 3: Identity & Security */}
-          {currentStep === 3 && (
-            <>
-              <div className="mb-5">
-                <label className="block text-sm font-semibold text-black mb-2">
-                  Proof ID :
-                </label>
-                <input 
-                  type="text"
-                  name="proofId"
-                  value={formData.proofId}
-                  onChange={handleInputChange}
-                  placeholder="Aadhaar/PAN/Passport"
-                  required
-                  className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
-                />
-              </div>
-
-              <div className="mb-5">
-                <label className="block text-sm font-semibold text-black mb-2">
-                  ID No :
-                </label>
-                <input 
-                  type="text"
-                  name="idNo"
-                  value={formData.idNo}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
-                />
-              </div>
-
-              <div className="mb-5">
-                <label className="block text-sm font-semibold text-black mb-2">
-                  Create Password :
-                </label>
-                <input 
-                  type="password"
-                  name="password"
-                  value={formData.password}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
-                />
-              </div>
-
-              <div className="mb-5">
-                <label className="block text-sm font-semibold text-black mb-2">
-                  Confirm Password :
-                </label>
-                <input 
-                  type="password"
-                  name="confirmPassword"
-                  value={formData.confirmPassword}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none"
-                />
-              </div>
-
-              {/* Checkboxes */}
-              <div className="mb-3 text-xs">
-                <label className="flex items-center cursor-pointer text-black">
-                  <input 
-                    type="checkbox"
-                    name="agreeTerms"
-                    checked={formData.agreeTerms}
-                    onChange={handleInputChange}
-                    required
-                    className="mr-2"
-                  />
-                  I agree that the information provided is correct
-                </label>
-              </div>
-
-              <div className="mb-5 text-xs">
-                <label className="flex items-center cursor-pointer text-black">
-                  <input 
-                    type="checkbox"
-                    name="agreePrivacy"
-                    checked={formData.agreePrivacy}
-                    onChange={handleInputChange}
-                    required
-                    className="mr-2"
-                  />
-                  I agree to the Terms of Service and Privacy Policy
-                </label>
-              </div>
-            </>
-          )}
-
-          {/* Navigation Buttons */}
-          <div className="flex gap-3 mt-7">
-            <button 
-              type="button"
-              onClick={handleBack}
-              className="flex-1 py-3.5 bg-white text-blue-500 border-2 border-blue-500 rounded-lg text-base font-bold hover:-translate-y-0.5 transition-all duration-300 tracking-wider"
-            >
-              Back
-            </button>
-
-            {currentStep < 3 ? (
-              <button 
-                type="button"
-                onClick={handleNext}
-                className="flex-1 py-3.5 bg-blue-500 text-white rounded-lg text-base font-bold hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/40 transition-all duration-300 tracking-wider"
-              >
-                Next
-              </button>
-            ) : (
-              <button 
-                type="submit"
-                className="flex-1 py-3.5 bg-green-500 text-white rounded-lg text-base font-bold hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 tracking-wider"
-              >
-                Submit
-              </button>
+          {/* Name */}
+          <div className="mb-5">
+            <label className="block text-sm font-semibold text-black mb-2">
+              Name
+            </label>
+            <input 
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              disabled={loading}
+              className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none disabled:opacity-50"
+              placeholder="Enter your full name"
+            />
+            {errors.name && (
+              <p className="text-red-600 text-xs mt-1">{errors.name}</p>
             )}
           </div>
+
+          {/* Phone */}
+          <div className="mb-5">
+            <label className="block text-sm font-semibold text-black mb-2">
+              Phone
+            </label>
+            <input 
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+              disabled={loading}
+              className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none disabled:opacity-50"
+              placeholder="Enter 10-digit phone number"
+              maxLength={10}
+            />
+            {errors.phone && (
+              <p className="text-red-600 text-xs mt-1">{errors.phone}</p>
+            )}
+          </div>
+
+          {/* Create Password */}
+          <div className="mb-5">
+            <label className="block text-sm font-semibold text-black mb-2">
+              Create Password
+            </label>
+            <input 
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleInputChange}
+              disabled={loading}
+              className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none disabled:opacity-50"
+              placeholder="At least 6 characters"
+            />
+            {errors.password && (
+              <p className="text-red-600 text-xs mt-1">{errors.password}</p>
+            )}
+          </div>
+
+          {/* Confirm Password */}
+          <div className="mb-7">
+            <label className="block text-sm font-semibold text-black mb-2">
+              Confirm Password
+            </label>
+            <input 
+              type="password"
+              name="confirmPassword"
+              value={formData.confirmPassword}
+              onChange={handleInputChange}
+              disabled={loading}
+              className="w-full px-4 py-3 border-none rounded-lg text-sm bg-white text-black outline-none disabled:opacity-50"
+              placeholder="Re-enter your password"
+            />
+            {errors.confirmPassword && (
+              <p className="text-red-600 text-xs mt-1">{errors.confirmPassword}</p>
+            )}
+          </div>
+
+          {/* Register Button */}
+          <button 
+            type="submit"
+            disabled={loading}
+            className="w-full py-3.5 bg-green-500 text-white rounded-lg text-base font-bold hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 tracking-wider disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+          >
+            {loading ? 'REGISTERING...' : 'REGISTER'}
+          </button>
         </form>
       </div>
     </div>
