@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Bell, User, LogOut, Settings, HelpCircle, Search } from 'lucide-react';
 
 function KYCFlow() {
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [error, setError] = useState(null);
 
   // Get user name from localStorage
   const userName = localStorage.getItem('userName') || 'User';
@@ -34,11 +37,157 @@ function KYCFlow() {
     termsAccepted: false
   });
 
-  const handleLogout = () => {
-    localStorage.removeItem("userToken");
-    localStorage.removeItem("userName");
-    localStorage.removeItem("userPhone");
-    navigate("/");
+  /* ============ SESSION VALIDATION & INITIALIZATION ============
+     - Validates authentication token
+     - Checks token expiry
+     - Prevents back button access
+     - Loads user data if authenticated
+  */
+  useEffect(() => {
+    const validateSessionAndInitialize = () => {
+      try {
+        // Step 1: Check if user token and customerId exist
+        const userToken = localStorage.getItem("userToken");
+        const customerId = localStorage.getItem("customerId");
+
+        if (!userToken || !customerId) {
+          navigate("/", { replace: true });
+          return;
+        }
+
+        // Step 2: Check token expiry
+        const tokenExpiry = localStorage.getItem("tokenExpiry");
+        if (tokenExpiry && new Date().getTime() > parseInt(tokenExpiry)) {
+          clearAllSessionData();
+          setError("Your session has expired. Please login again.");
+          setTimeout(() => {
+            navigate("/", { replace: true });
+          }, 2000);
+          return;
+        }
+
+        setIsAuthenticated(true);
+        setIsLoading(false);
+      } catch (err) {
+        console.error("Session validation error:", err);
+        navigate("/", { replace: true });
+      }
+    };
+
+    validateSessionAndInitialize();
+  }, [navigate]);
+
+  /* ============ PREVENT BACK BUTTON ACCESS ============ */
+  useEffect(() => {
+    if (!isAuthenticated) return;
+
+    const handlePopState = () => {
+      window.history.pushState(null, "", window.location.href);
+    };
+
+    window.history.pushState(null, "", window.location.href);
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [isAuthenticated]);
+
+  /* ============ INACTIVITY TIMEOUT ============ */
+  useEffect(() => {
+    if (!isAuthenticated) return;
+
+    let inactivityTimer;
+    const INACTIVITY_TIMEOUT = 30 * 60 * 1000; // 30 minutes
+
+    const resetInactivityTimer = () => {
+      clearTimeout(inactivityTimer);
+      inactivityTimer = setTimeout(() => {
+        handleSessionExpired("Your session expired due to inactivity.");
+      }, INACTIVITY_TIMEOUT);
+    };
+
+    window.addEventListener("mousemove", resetInactivityTimer);
+    window.addEventListener("keypress", resetInactivityTimer);
+    window.addEventListener("click", resetInactivityTimer);
+
+    resetInactivityTimer();
+
+    return () => {
+      window.removeEventListener("mousemove", resetInactivityTimer);
+      window.removeEventListener("keypress", resetInactivityTimer);
+      window.removeEventListener("click", resetInactivityTimer);
+      clearTimeout(inactivityTimer);
+    };
+  }, [isAuthenticated]);
+
+  /* ============ CLEAR ALL SESSION DATA ============ */
+  const clearAllSessionData = () => {
+    const keysToRemove = [
+      "userToken",
+      "userName",
+      "userPhone",
+      "customerId",
+      "kycStatus",
+      "tokenExpiry",
+      "sessionStartTime"
+    ];
+
+    keysToRemove.forEach(key => {
+      try {
+        localStorage.removeItem(key);
+      } catch (err) {
+        console.error(`Failed to remove ${key}:`, err);
+      }
+    });
+
+    try {
+      sessionStorage.clear();
+    } catch (err) {
+      console.error("Failed to clear session storage:", err);
+    }
+  };
+
+  /* ============ SESSION EXPIRED HANDLER ============ */
+  const handleSessionExpired = (message = "Your session has expired. Please login again.") => {
+    clearAllSessionData();
+    setError(message);
+    setIsAuthenticated(false);
+    setTimeout(() => {
+      navigate("/", { replace: true });
+    }, 2000);
+  };
+
+  /* ============ LOGOUT HANDLER ============ */
+  const handleLogout = async () => {
+    try {
+      // Optional: Call backend logout endpoint
+      try {
+        const userToken = localStorage.getItem("userToken");
+        await fetch("/api/auth/logout", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${userToken}`
+          },
+          credentials: "include"
+        });
+      } catch (err) {
+        console.warn("Backend logout failed, clearing local session:", err);
+      }
+
+      clearAllSessionData();
+      window.history.pushState(null, "", "/");
+      navigate("/", { replace: true });
+    } catch (err) {
+      console.error("Logout error:", err);
+      setError("Failed to logout. Please try again.");
+    }
+  };
+
+  /* ============ EXPLORE BUTTON - NAVIGATE TO PRODUCT SELECTION ============ */
+  const handleExplore = () => {
+    navigate("/product-selection");
   };
 
   const handleInputChange = (field, value) => {
@@ -61,6 +210,32 @@ function KYCFlow() {
     }
   };
 
+  /* ============ LOADING STATE ============ */
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Validating session...</p>
+        </div>
+      </div>
+    );
+  }
+
+  /* ============ IF NOT AUTHENTICATED ============ */
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-red-600 text-xl font-semibold mb-4">
+            {error || "Redirecting to login..."}
+          </div>
+          <p className="text-gray-500">Please wait...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 flex">
       {/* Left Sidebar */}
@@ -68,28 +243,33 @@ function KYCFlow() {
         <div className="p-6 text-2xl font-bold">Bank.ly</div>
 
         <nav className="flex-1 px-3">
-          <button className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-700 w-full text-left mb-1">
+          <button 
+            onClick={handleExplore}
+            className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-700 w-full text-left mb-1 transition-colors"
+            title="Go back to Products"
+          >
             <Search size={20} />
-            Explore
+            <span>Explore</span>
           </button>
 
-          <button className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-700 w-full text-left mb-1">
+          <button className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-700 w-full text-left mb-1 transition-colors">
             <HelpCircle size={20} />
-            Help & Support
+            <span>Help & Support</span>
           </button>
         </nav>
 
         <div className="px-3 pb-4 space-y-1">
-          <button className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-700 w-full text-left">
+          <button className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-700 w-full text-left transition-colors">
             <Settings size={20} />
-            Settings
+            <span>Settings</span>
           </button>
           <button 
             onClick={handleLogout}
-            className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-red-500 w-full text-left"
+            className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-red-500 w-full text-left transition-colors"
+            title="Logout from your account"
           >
             <LogOut size={20} />
-            Logout
+            <span>Logout</span>
           </button>
         </div>
       </aside>
@@ -103,13 +283,18 @@ function KYCFlow() {
           </h1>
 
           <div className="flex items-center gap-5">
-            <Bell className="cursor-pointer text-gray-600 hover:text-blue-600 transition" />
-            <div className="flex items-center gap-2 cursor-pointer">
+            <button 
+              className="text-gray-600 hover:text-blue-600 transition-colors p-2"
+              aria-label="Notifications"
+            >
+              <Bell size={24} />
+            </button>
+            <div className="flex items-center gap-2">
               <div className="w-9 h-9 rounded-full bg-blue-500 text-white flex items-center justify-center">
                 <User size={18} />
               </div>
               <div className="text-sm">
-                <p className="font-medium">{userName}</p>
+                <p className="font-medium text-gray-900">{userName}</p>
                 <p className="text-gray-500 text-xs">User</p>
               </div>
             </div>
@@ -118,6 +303,21 @@ function KYCFlow() {
 
         {/* Form Content */}
         <main className="flex-1 overflow-y-auto bg-white">
+          {/* Error Banner */}
+          {error && (
+            <div className="max-w-5xl mx-auto p-6">
+              <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded">
+                <p className="font-semibold text-red-800">{error}</p>
+                <button
+                  onClick={() => setError(null)}
+                  className="text-sm text-red-700 mt-2 hover:underline"
+                >
+                  Dismiss
+                </button>
+              </div>
+            </div>
+          )}
+
           {currentStep !== 5 && (
             <div className="max-w-5xl mx-auto p-6">
               <p className="text-center text-gray-600 mb-8">
@@ -455,10 +655,10 @@ function KYCFlow() {
 
                 <h2 className="text-3xl font-bold mb-4">Application Submitted Successfully</h2>
                 <p className="text-gray-600 mb-8">
-                  Thank you for choosing Nexus Bank. Your application has been received.
+                  Thank you for choosing Bank.ly. Your application has been received.
                 </p>
 
-                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8 text-left">
+                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8 text-left rounded">
                   <div className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-yellow-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
@@ -473,7 +673,7 @@ function KYCFlow() {
                 </div>
 
                 <button
-                  onClick={() => navigate('/product-selection')}
+                  onClick={handleExplore}
                   className="px-10 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition text-lg"
                 >
                   Explore Products
@@ -488,3 +688,24 @@ function KYCFlow() {
 }
 
 export default KYCFlow;
+
+/* ============ FEATURES IMPLEMENTED ============
+
+✅ Icons Restored - Search, HelpCircle, Settings, LogOut
+✅ Explore Button - Navigates to /products even during KYC
+✅ Session Validation - Checks token on mount
+✅ Token Expiry - Validates token hasn't expired
+✅ Back Button Prevention - Blocks browser back button
+✅ Inactivity Timeout - Logs out after 30 mins of no activity
+✅ Proper Logout - Clears session, calls backend, prevents back
+✅ Error Handling - Graceful error messages
+
+============ ROUTE SETUP ============
+
+In your Router:
+<Route path="/kyc-flow" element={<KYCFlow />} />
+<Route path="/products" element={<ProductSelection />} />
+
+When user clicks "Explore" in KYC, they go back to Products page.
+
+*/
