@@ -5,40 +5,32 @@ import { Bell, User, LogOut, Settings, HelpCircle, Search } from 'lucide-react';
 function KYCFlow() {
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
-  const [showEmailVerification, setShowEmailVerification] = useState(false);
-  const [otp, setOtp] = useState(['', '', '', '', '', '']);
-  const [resendTimer, setResendTimer] = useState(25);
 
   // Get user name from localStorage
   const userName = localStorage.getItem('userName') || 'User';
 
   // Form data state
   const [formData, setFormData] = useState({
-    // Step 1 - Profile & Account
-    accountType: 'savings',
+    // Step 1 - Profile
     name: userName,
     dateOfBirth: '',
     gender: '',
     maritalStatus: '',
-    
+
     // Step 2 - Contact Details
     email: '',
     contactNo: '',
     emergencyContact: '',
-    
+
     // Step 3 - Residential Address
     address: '',
     city: '',
     state: '',
     zipCode: '',
-    
-    // Step 4 - Document Upload
-    identityProofType: '',
-    identityProofNumber: '',
-    identityProofFile: null,
-    addressProofType: '',
-    addressProofNumber: '',
-    addressProofFile: null,
+
+    // Step 4 - Document Upload (Aadhaar & PAN)
+    aadhaarNumber: '',
+    panNumber: '',
     termsAccepted: false
   });
 
@@ -51,41 +43,6 @@ function KYCFlow() {
 
   const handleInputChange = (field, value) => {
     setFormData(prev => ({ ...prev, [field]: value }));
-  };
-
-  const handleOtpChange = (index, value) => {
-    if (value.length <= 1 && /^\d*$/.test(value)) {
-      const newOtp = [...otp];
-      newOtp[index] = value;
-      setOtp(newOtp);
-      
-      // Auto-focus next input
-      if (value && index < 5) {
-        document.getElementById(`otp-${index + 1}`)?.focus();
-      }
-    }
-  };
-
-  const handleVerifyEmail = () => {
-    setShowEmailVerification(true);
-    // Start countdown
-    const timer = setInterval(() => {
-      setResendTimer(prev => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-  };
-
-  const handleVerifyOtp = () => {
-    const otpValue = otp.join('');
-    if (otpValue.length === 6) {
-      setShowEmailVerification(false);
-      alert('Email verified successfully!');
-    }
   };
 
   const handleNext = () => {
@@ -106,51 +63,6 @@ function KYCFlow() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex">
-      {/* Email Verification Modal */}
-      {showEmailVerification && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-2xl p-8 w-full max-w-md shadow-2xl">
-            <h2 className="text-2xl font-bold text-center mb-4">Verify Email Address</h2>
-            <p className="text-center text-gray-600 mb-6">
-              Enter the 6-digit code sent to {formData.email || 'your email'}
-            </p>
-            
-            <div className="flex gap-2 justify-center mb-4">
-              {otp.map((digit, index) => (
-                <input
-                  key={index}
-                  id={`otp-${index}`}
-                  type="text"
-                  maxLength="1"
-                  value={digit}
-                  onChange={(e) => handleOtpChange(index, e.target.value)}
-                  className="w-12 h-12 text-center text-xl font-bold border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none"
-                />
-              ))}
-            </div>
-            
-            <p className="text-center text-sm text-gray-500 mb-6">
-              Resend code in {resendTimer > 0 ? `00:${resendTimer.toString().padStart(2, '0')}` : '00:00'}s
-            </p>
-            
-            <div className="flex gap-3">
-              <button
-                onClick={() => setShowEmailVerification(false)}
-                className="flex-1 px-6 py-3 bg-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-400 transition"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={handleVerifyOtp}
-                className="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
-              >
-                Verify & Proceed
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Left Sidebar */}
       <aside className="w-64 bg-gradient-to-b from-blue-600 to-blue-500 text-white flex flex-col flex-shrink-0">
         <div className="p-6 text-2xl font-bold">Bank.ly</div>
@@ -187,7 +99,7 @@ function KYCFlow() {
         {/* Top Header */}
         <header className="h-16 bg-white flex items-center justify-between px-6 shadow-sm flex-shrink-0">
           <h1 className="text-xl font-semibold">
-            {currentStep === 5 ? 'Application Status' : 'New Account Application'}
+            {currentStep === 5 ? 'Application Status' : 'Complete your KYC'}
           </h1>
 
           <div className="flex items-center gap-5">
@@ -271,36 +183,10 @@ function KYCFlow() {
 
                 {/* Form Content */}
                 <div className="flex-1 bg-white rounded-xl border border-gray-200 p-8">
-                  {/* Step 1: Profile & Account */}
+                  {/* Step 1: Profile */}
                   {currentStep === 1 && (
                     <div>
-                      <h2 className="text-xl font-bold mb-6">Account Type</h2>
-                      <p className="text-gray-600 text-sm mb-4">Choose the account that best fits your needs</p>
-                      
-                      <div className="flex gap-4 mb-8">
-                        <button
-                          onClick={() => handleInputChange('accountType', 'savings')}
-                          className={`px-6 py-2 rounded-lg font-semibold transition ${
-                            formData.accountType === 'savings'
-                              ? 'bg-blue-600 text-white'
-                              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                          }`}
-                        >
-                          Savings Account
-                        </button>
-                        <button
-                          onClick={() => handleInputChange('accountType', 'current')}
-                          className={`px-6 py-2 rounded-lg font-semibold transition ${
-                            formData.accountType === 'current'
-                              ? 'bg-blue-600 text-white'
-                              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                          }`}
-                        >
-                          Current Account
-                        </button>
-                      </div>
-
-                      <h2 className="text-xl font-bold mb-4">Personal Information</h2>
+                      <h2 className="text-xl font-bold mb-6">Personal Information</h2>
                       <p className="text-gray-600 text-sm mb-6">
                         Ensure your name and details match your official government ID
                       </p>
@@ -370,21 +256,13 @@ function KYCFlow() {
                       <div className="space-y-4">
                         <div>
                           <label className="block text-sm font-semibold mb-2">Email</label>
-                          <div className="flex gap-2">
-                            <input
-                              type="email"
-                              value={formData.email}
-                              onChange={(e) => handleInputChange('email', e.target.value)}
-                              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-                              placeholder="Enter your email address"
-                            />
-                            <button
-                              onClick={handleVerifyEmail}
-                              className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
-                            >
-                              Verify
-                            </button>
-                          </div>
+                          <input
+                            type="email"
+                            value={formData.email}
+                            onChange={(e) => handleInputChange('email', e.target.value)}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                            placeholder="Enter your email address"
+                          />
                         </div>
 
                         <div>
@@ -478,112 +356,45 @@ function KYCFlow() {
                     </div>
                   )}
 
-                  {/* Step 4: Document Upload */}
+                  {/* Step 4: Document Upload (Aadhaar & PAN) */}
                   {currentStep === 4 && (
                     <div>
                       <h2 className="text-xl font-bold mb-4">Document Verification</h2>
                       <p className="text-gray-600 text-sm mb-6">
-                        Please upload clear images of your official documents
+                        Please upload clear images of your Aadhaar and PAN
                       </p>
 
                       <div className="space-y-6">
-                        {/* Identity Proof */}
+                        {/* Aadhaar */}
                         <div>
-                          <h3 className="font-semibold mb-3">Identity proof</h3>
+                          <h3 className="font-semibold mb-3">Aadhaar Card</h3>
                           <div className="space-y-3">
                             <div>
-                              <label className="block text-sm font-semibold mb-2">Select ID type</label>
-                              <select
-                                value={formData.identityProofType}
-                                onChange={(e) => handleInputChange('identityProofType', e.target.value)}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-                              >
-                                <option value="">Select document type</option>
-                                <option value="aadhaar">Aadhaar Card</option>
-                                <option value="pan">PAN Card</option>
-                                <option value="passport">Passport</option>
-                                <option value="voter">Voter ID</option>
-                                <option value="driving">Driving License</option>
-                              </select>
-                            </div>
-
-                            <div>
-                              <label className="block text-sm font-semibold mb-2">ID Number</label>
+                              <label className="block text-sm font-semibold mb-2">Aadhaar Number</label>
                               <input
                                 type="text"
-                                value={formData.identityProofNumber}
-                                onChange={(e) => handleInputChange('identityProofNumber', e.target.value)}
+                                value={formData.aadhaarNumber}
+                                onChange={(e) => handleInputChange('aadhaarNumber', e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-                                placeholder="Enter ID number"
+                                placeholder="Enter Aadhaar number"
                               />
-                            </div>
-
-                            <div>
-                              <label className="block text-sm font-semibold mb-2">Upload file</label>
-                              <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-500 transition cursor-pointer">
-                                <div className="w-16 h-16 mx-auto mb-3 bg-blue-100 rounded-full flex items-center justify-center">
-                                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                                  </svg>
-                                </div>
-                                <p className="text-sm text-gray-600">Upload your file</p>
-                                <input
-                                  type="file"
-                                  onChange={(e) => handleInputChange('identityProofFile', e.target.files[0])}
-                                  className="hidden"
-                                  accept="image/*,.pdf"
-                                />
-                              </div>
                             </div>
                           </div>
                         </div>
 
-                        {/* Address Proof */}
+                        {/* PAN */}
                         <div>
-                          <h3 className="font-semibold mb-3">Address proof</h3>
+                          <h3 className="font-semibold mb-3">PAN Card</h3>
                           <div className="space-y-3">
                             <div>
-                              <label className="block text-sm font-semibold mb-2">Select document</label>
-                              <select
-                                value={formData.addressProofType}
-                                onChange={(e) => handleInputChange('addressProofType', e.target.value)}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-                              >
-                                <option value="">Select document type</option>
-                                <option value="aadhaar">Aadhaar Card</option>
-                                <option value="passport">Passport</option>
-                                <option value="utility">Utility Bill</option>
-                                <option value="rental">Rental Agreement</option>
-                              </select>
-                            </div>
-
-                            <div>
-                              <label className="block text-sm font-semibold mb-2">Document number</label>
+                              <label className="block text-sm font-semibold mb-2">PAN Number</label>
                               <input
                                 type="text"
-                                value={formData.addressProofNumber}
-                                onChange={(e) => handleInputChange('addressProofNumber', e.target.value)}
+                                value={formData.panNumber}
+                                onChange={(e) => handleInputChange('panNumber', e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-                                placeholder="Enter document number"
+                                placeholder="Enter PAN number"
                               />
-                            </div>
-
-                            <div>
-                              <label className="block text-sm font-semibold mb-2">Upload file</label>
-                              <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-500 transition cursor-pointer">
-                                <div className="w-16 h-16 mx-auto mb-3 bg-blue-100 rounded-full flex items-center justify-center">
-                                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                                  </svg>
-                                </div>
-                                <p className="text-sm text-gray-600">Upload your file</p>
-                                <input
-                                  type="file"
-                                  onChange={(e) => handleInputChange('addressProofFile', e.target.files[0])}
-                                  className="hidden"
-                                  accept="image/*,.pdf"
-                                />
-                              </div>
                             </div>
                           </div>
                         </div>
