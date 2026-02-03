@@ -121,7 +121,7 @@ function KYCFlow() {
           {currentStep !== 5 && (
             <div className="max-w-5xl mx-auto p-6">
               <p className="text-center text-gray-600 mb-8">
-                Please complete the details below to activate your account
+                Please fill the below fields to complete your KYC process
               </p>
 
               <div className="flex gap-6">
@@ -361,7 +361,7 @@ function KYCFlow() {
                     <div>
                       <h2 className="text-xl font-bold mb-4">Document Verification</h2>
                       <p className="text-gray-600 text-sm mb-6">
-                        Please upload clear images of your Aadhaar and PAN
+                        Please fill out the details from your Aadhaar and PAN cards for verification.
                       </p>
 
                       <div className="space-y-6">
