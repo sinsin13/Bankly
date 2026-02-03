@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import api from "../services/api";
 
 export default function AdminLogin() {
   const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -11,29 +13,34 @@ export default function AdminLogin() {
   const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
-
-    if (!email || !password) {
-      setError("Please enter both Admin ID and Password");
-      return;
-    }
-
     setLoading(true);
 
     try {
-      // TODO: Replace with actual API call
-      // const response = await api.post('/auth/admin/login', { email, password });
-      
-      // Simulating API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await api.post("/Auth/login", {
+        email,
+        password,
+      });
 
-      // Store token and admin info
-      localStorage.setItem("adminToken", "dummy-admin-token");
-      localStorage.setItem("adminName", email.split('@')[0] || "Admin");
-      
-      // Navigate to dashboard
+      const { token, userName, role, expiration } = response.data;
+
+      // 🔐 Hard check
+      if (role !== "Admin") {
+        throw new Error("Access denied: Not an admin account");
+      }
+
+      // ✅ Store auth data
+      localStorage.setItem("token", token);
+      localStorage.setItem("role", role);
+      localStorage.setItem("userName", userName);
+      localStorage.setItem("expiresAt", expiration);
+
       navigate("/admin/dashboard");
     } catch (err) {
-      setError("Invalid credentials. Please try again.");
+      setError(
+        err.response?.data ||
+        err.message ||
+        "Invalid admin credentials"
+      );
     } finally {
       setLoading(false);
     }
@@ -41,13 +48,10 @@ export default function AdminLogin() {
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-blue-600 to-blue-500 flex items-center justify-center relative">
-      
-      {/* Top Left Logo */}
       <div className="absolute top-6 left-10 text-white text-xl font-bold">
         Bank.ly
       </div>
 
-      {/* Top Right Go Back */}
       <button
         onClick={() => navigate("/role-selection")}
         className="absolute top-6 right-10 bg-white text-blue-700 px-5 py-2 rounded-lg font-semibold shadow hover:scale-105 transition"
@@ -55,7 +59,6 @@ export default function AdminLogin() {
         ← Go Back
       </button>
 
-      {/* Login Card */}
       <form
         onSubmit={handleLogin}
         className="bg-blue-50/90 backdrop-blur-md rounded-2xl shadow-2xl px-10 py-12 w-[420px]"
@@ -70,43 +73,40 @@ export default function AdminLogin() {
           </div>
         )}
 
-        {/* Admin ID */}
         <div className="mb-6">
           <label className="block text-sm font-semibold mb-2 text-black">
-            Admin ID
+            Admin Email
           </label>
           <input
-            type="text"
-            className="w-full px-4 py-3 rounded-lg outline-none disabled:opacity-50"
+            type="email"
+            className="w-full px-4 py-3 rounded-lg outline-none"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             disabled={loading}
-            placeholder="Enter your admin ID"
+            required
           />
         </div>
 
-        {/* Password */}
         <div className="mb-8">
           <label className="block text-sm font-semibold mb-2 text-black">
             Password
           </label>
           <input
             type="password"
-            className="w-full px-4 py-3 rounded-lg outline-none disabled:opacity-50"
+            className="w-full px-4 py-3 rounded-lg outline-none"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             disabled={loading}
-            placeholder="Enter your password"
+            required
           />
         </div>
 
-        {/* Login Button */}
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg font-bold text-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg font-bold text-lg transition disabled:opacity-50"
         >
-          {loading ? 'LOGGING IN...' : 'LOGIN'}
+          {loading ? "LOGGING IN..." : "LOGIN"}
         </button>
       </form>
     </div>
