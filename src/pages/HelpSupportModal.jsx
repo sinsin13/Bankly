@@ -37,7 +37,7 @@ function HelpSupportModal({ isOpen, onClose }) {
           {/* Content */}
           <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
             {/* Contact Methods */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               {/* Phone Support */}
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-5 hover:shadow-lg transition-shadow">
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mb-3">
@@ -58,19 +58,6 @@ function HelpSupportModal({ isOpen, onClose }) {
                 <p className="text-sm text-gray-600 mb-2">Get help via email</p>
                 <p className="text-purple-600 font-semibold text-sm">support@bankly.com</p>
                 <p className="text-xs text-gray-500 mt-1">24-48 hour response</p>
-              </div>
-
-              {/* Live Chat */}
-              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-5 hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-3">
-                  <MessageCircle className="text-white" size={24} />
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-1">Live Chat</h3>
-                <p className="text-sm text-gray-600 mb-2">Instant assistance</p>
-                <button className="text-green-600 font-semibold hover:underline">
-                  Start Chat →
-                </button>
-                <p className="text-xs text-gray-500 mt-1">Available 24/7</p>
               </div>
             </div>
 
