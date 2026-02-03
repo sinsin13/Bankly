@@ -41,30 +41,21 @@ function ProductSelection() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [error, setError] = useState(null);
 
-  /* ============ SESSION VALIDATION & INITIALIZATION ============
-     - Validates authentication token
-     - Checks token expiry
-     - Prevents back button access
-     - Loads user data if authenticated
-     - Redirects if not authenticated
-  */
+  /* ============ SESSION VALIDATION & INITIALIZATION ============ */
   useEffect(() => {
     const validateSessionAndInitialize = () => {
       try {
-        // Step 1: Check if user token and customerId exist
+        // Check if user token and customerId exist
         const userToken = localStorage.getItem("userToken");
         const customerId = localStorage.getItem("customerId");
-
         if (!userToken || !customerId) {
-          // Not authenticated, redirect to login
           navigate("/", { replace: true });
           return;
         }
 
-        // Step 2: Check token expiry
+        // Check token expiry
         const tokenExpiry = localStorage.getItem("tokenExpiry");
         if (tokenExpiry && new Date().getTime() > parseInt(tokenExpiry)) {
-          // Token has expired
           clearAllSessionData();
           setError("Your session has expired. Please login again.");
           setTimeout(() => {
@@ -73,7 +64,7 @@ function ProductSelection() {
           return;
         }
 
-        // Step 3: Load KYC status
+        // Load KYC status
         const storedStatus = localStorage.getItem("kycStatus");
         if (storedStatus && VALID_KYC_STATUSES.includes(storedStatus)) {
           setKycStatus(storedStatus);
@@ -81,7 +72,7 @@ function ProductSelection() {
           setKycStatus("not_started");
         }
 
-        // Step 4: Load user name
+        // Load user name
         const storedUserName = localStorage.getItem("userName");
         if (storedUserName && storedUserName.trim()) {
           setUserName(storedUserName);
@@ -89,7 +80,7 @@ function ProductSelection() {
           setUserName("User");
         }
 
-        // Step 5: Mark as authenticated
+        // Mark as authenticated
         setIsAuthenticated(true);
         setIsLoading(false);
       } catch (err) {
@@ -101,32 +92,28 @@ function ProductSelection() {
     validateSessionAndInitialize();
   }, [navigate]);
 
-  /* ============ PREVENT BACK BUTTON ACCESS ============
-     - Blocks browser back button from returning to this page
-     - Pushes state to prevent unwanted navigation
-  */
+  /* ============ BACK BUTTON HANDLING - LOGOUT ON BACK ============ */
   useEffect(() => {
     if (!isAuthenticated) return;
 
-    const handlePopState = () => {
-      // If user tries to go back, redirect to login
-      navigate("/", { replace: true });
+    // Mark that we're on the product selection page
+    sessionStorage.setItem('currentPage', 'product-selection');
+
+    const handlePopState = (event) => {
+      // When back button is pressed from product selection, logout
+      handleLogout();
     };
 
     // Push current state to history
-    window.history.pushState(null, "", window.location.href);
+    window.history.pushState({ page: 'product-selection' }, '', window.location.href);
     window.addEventListener("popstate", handlePopState);
 
-    // Cleanup
     return () => {
       window.removeEventListener("popstate", handlePopState);
     };
-  }, [isAuthenticated, navigate]);
+  }, [isAuthenticated]);
 
-  /* ============ INACTIVITY TIMEOUT (OPTIONAL) ============
-     - Logs out user after 30 minutes of inactivity
-     - Resets timer on user interaction
-  */
+  /* ============ INACTIVITY TIMEOUT ============ */
   useEffect(() => {
     if (!isAuthenticated) return;
 
@@ -140,11 +127,9 @@ function ProductSelection() {
       }, INACTIVITY_TIMEOUT);
     };
 
-    // Listen for user activity
     window.addEventListener("mousemove", resetInactivityTimer);
     window.addEventListener("keypress", resetInactivityTimer);
     window.addEventListener("click", resetInactivityTimer);
-
     resetInactivityTimer();
 
     return () => {
@@ -166,7 +151,6 @@ function ProductSelection() {
       "tokenExpiry",
       "sessionStartTime"
     ];
-
     keysToRemove.forEach(key => {
       try {
         localStorage.removeItem(key);
@@ -174,7 +158,6 @@ function ProductSelection() {
         console.error(`Failed to remove ${key}:`, err);
       }
     });
-
     try {
       sessionStorage.clear();
     } catch (err) {
@@ -192,12 +175,7 @@ function ProductSelection() {
     }, 2000);
   };
 
-  /* ============ LOGOUT HANDLER ============
-     - Calls backend logout endpoint (optional)
-     - Clears all session data
-     - Prevents back button access
-     - Redirects to login
-  */
+  /* ============ LOGOUT HANDLER ============ */
   const handleLogout = async () => {
     try {
       // Optional: Call backend logout endpoint
@@ -209,7 +187,7 @@ function ProductSelection() {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${userToken}`
           },
-          credentials: "include" // Include cookies if using session cookies
+          credentials: "include"
         });
       } catch (err) {
         console.warn("Backend logout failed, clearing local session:", err);
@@ -217,9 +195,6 @@ function ProductSelection() {
 
       // Clear all session data
       clearAllSessionData();
-
-      // Prevent back button
-      window.history.pushState(null, "", "/");
 
       // Navigate with replace to prevent back button
       navigate("/", { replace: true });
@@ -277,7 +252,6 @@ function ProductSelection() {
       {/* ============ SIDEBAR ============ */}
       <aside className="w-80 bg-gradient-to-b from-blue-600 to-blue-500 text-white flex flex-col">
         <div className="p-8 text-3xl font-bold">Bank.ly</div>
-
         <nav className="flex-1 px-4 space-y-2">
           <button 
             className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white text-blue-600 w-full text-left font-medium hover:bg-gray-100 transition-colors"
@@ -294,7 +268,6 @@ function ProductSelection() {
             Help & Support
           </button>
         </nav>
-
         <div className="px-4 pb-6 space-y-1">
           <button 
             className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-700 w-full text-left font-medium transition-colors"
@@ -391,7 +364,6 @@ function ProductSelection() {
               <p className="text-lg text-gray-700 mb-8">
                 {kyc.description}
               </p>
-
               <button
                 onClick={handleKYCClick}
                 disabled={kycStatus !== "not_started"}
@@ -414,14 +386,12 @@ function ProductSelection() {
                   <p className="font-semibold">{kyc.lockText}</p>
                 </div>
               )}
-
               <h2 className="text-3xl font-bold mb-4 text-gray-900">Open Bank Account</h2>
               <p className="text-lg text-gray-700 mb-8">
                 {kycStatus === "approved"
                   ? "Choose savings or current account"
                   : "Complete KYC verification first"}
               </p>
-
               <button
                 onClick={handleOpenAccountClick}
                 disabled={kycStatus !== "approved"}
@@ -440,36 +410,3 @@ function ProductSelection() {
 }
 
 export default ProductSelection;
-
-/* ============ SETUP GUIDE ============
-
-AFTER SUCCESSFUL LOGIN:
-Set these in localStorage:
-
-localStorage.setItem("userToken", response.token);
-localStorage.setItem("customerId", response.customerId);
-localStorage.setItem("userName", response.userName);
-localStorage.setItem("userPhone", response.userPhone);
-localStorage.setItem("kycStatus", response.kycStatus);
-
-// Set token expiry (24 hours)
-const expiryTime = new Date().getTime() + (24 * 60 * 60 * 1000);
-localStorage.setItem("tokenExpiry", expiryTime.toString());
-
-localStorage.setItem("sessionStartTime", new Date().getTime().toString());
-
-// Then navigate
-navigate("/products");
-
-============ FEATURES IMPLEMENTED ============
-
-✅ Session Validation - Checks token on component mount
-✅ Token Expiry - Validates token hasn't expired
-✅ Back Button Prevention - Blocks browser back button
-✅ Inactivity Timeout - Logs out after 30 mins of no activity
-✅ Logout Handler - Clears all session data, calls backend
-✅ Error Handling - Graceful error messages
-✅ Loading State - Shows loading while validating
-✅ Data Validation - Validates KYC status and user data
-
-*/

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Bell, User, LogOut, Settings, HelpCircle, Search, CheckCircle } from 'lucide-react';
 
@@ -7,6 +7,32 @@ function AccountCreation() {
   const userName = localStorage.getItem('userName') || 'User';
   const [selectedAccountType, setSelectedAccountType] = useState(null);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  /* ============ SESSION VALIDATION ============ */
+  useEffect(() => {
+    const userToken = localStorage.getItem("userToken");
+    const customerId = localStorage.getItem("customerId");
+    
+    if (!userToken || !customerId) {
+      navigate("/", { replace: true });
+      return;
+    }
+
+    setIsAuthenticated(true);
+  }, [navigate]);
+
+  /* ============ ALLOW NORMAL BACK BUTTON BEHAVIOR ============ */
+  useEffect(() => {
+    if (!isAuthenticated) return;
+
+    // Mark that we're on the account creation page
+    sessionStorage.setItem('currentPage', 'account-creation');
+
+    // Allow natural browser history navigation
+    // No popstate listener needed - browser handles it naturally
+    
+  }, [isAuthenticated]);
 
   const handleLogout = () => {
     localStorage.removeItem("userToken");
@@ -14,7 +40,8 @@ function AccountCreation() {
     localStorage.removeItem("userPhone");
     localStorage.removeItem("customerId");
     localStorage.removeItem("kycStatus");
-    navigate("/");
+    sessionStorage.clear();
+    navigate("/", { replace: true });
   };
 
   const handleAccountTypeSelect = (type) => {
@@ -39,6 +66,10 @@ function AccountCreation() {
     setTimeout(() => {
       navigate('/user/dashboard');
     }, 3000);
+  };
+
+  const handleExplore = () => {
+    navigate('/product-selection');
   };
 
   return (
@@ -68,27 +99,27 @@ function AccountCreation() {
       {/* Left Sidebar */}
       <aside className="w-64 bg-gradient-to-b from-blue-600 to-blue-500 text-white flex flex-col flex-shrink-0">
         <div className="p-6 text-2xl font-bold">Bank.ly</div>
-
         <nav className="flex-1 px-3">
-          <button className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-700 w-full text-left mb-1">
+          <button 
+            onClick={handleExplore}
+            className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-700 w-full text-left mb-1 transition-colors"
+          >
             <Search size={20} />
             Explore
           </button>
-
-          <button className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-700 w-full text-left mb-1">
+          <button className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-700 w-full text-left mb-1 transition-colors">
             <HelpCircle size={20} />
             Help & Support
           </button>
         </nav>
-
         <div className="px-3 pb-4 space-y-1">
-          <button className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-700 w-full text-left">
+          <button className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-700 w-full text-left transition-colors">
             <Settings size={20} />
             Settings
           </button>
           <button 
             onClick={handleLogout}
-            className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-red-500 w-full text-left"
+            className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-red-500 w-full text-left transition-colors"
           >
             <LogOut size={20} />
             Logout
@@ -101,7 +132,6 @@ function AccountCreation() {
         {/* Top Header */}
         <header className="h-16 bg-white flex items-center justify-between px-6 shadow-sm flex-shrink-0">
           <h1 className="text-xl font-semibold">Create New Account</h1>
-
           <div className="flex items-center gap-5">
             <Bell className="cursor-pointer text-gray-600 hover:text-blue-600 transition" />
             <div className="flex items-center gap-2 cursor-pointer">
@@ -152,12 +182,10 @@ function AccountCreation() {
                     </div>
                   )}
                 </div>
-
                 <h3 className="text-2xl font-bold mb-3">Savings Account</h3>
                 <p className="text-gray-600 mb-6">
                   Perfect for individuals looking to save money and earn interest
                 </p>
-
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-green-500" />
@@ -200,12 +228,10 @@ function AccountCreation() {
                     </div>
                   )}
                 </div>
-
                 <h3 className="text-2xl font-bold mb-3">Current Account</h3>
                 <p className="text-gray-600 mb-6">
                   Ideal for businesses and frequent transactions
                 </p>
-
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-green-500" />

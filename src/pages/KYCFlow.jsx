@@ -19,43 +19,34 @@ function KYCFlow() {
     dateOfBirth: '',
     gender: '',
     maritalStatus: '',
-
     // Step 2 - Contact Details
     email: '',
     contactNo: '',
     emergencyContact: '',
-
     // Step 3 - Residential Address
     address: '',
     city: '',
     state: '',
     zipCode: '',
-
     // Step 4 - Document Upload (Aadhaar & PAN)
     aadhaarNumber: '',
     panNumber: '',
     termsAccepted: false
   });
 
-  /* ============ SESSION VALIDATION & INITIALIZATION ============
-     - Validates authentication token
-     - Checks token expiry
-     - Prevents back button access
-     - Loads user data if authenticated
-  */
+  /* ============ SESSION VALIDATION & INITIALIZATION ============ */
   useEffect(() => {
     const validateSessionAndInitialize = () => {
       try {
-        // Step 1: Check if user token and customerId exist
+        // Check if user token and customerId exist
         const userToken = localStorage.getItem("userToken");
         const customerId = localStorage.getItem("customerId");
-
         if (!userToken || !customerId) {
           navigate("/", { replace: true });
           return;
         }
 
-        // Step 2: Check token expiry
+        // Check token expiry
         const tokenExpiry = localStorage.getItem("tokenExpiry");
         if (tokenExpiry && new Date().getTime() > parseInt(tokenExpiry)) {
           clearAllSessionData();
@@ -77,20 +68,16 @@ function KYCFlow() {
     validateSessionAndInitialize();
   }, [navigate]);
 
-  /* ============ PREVENT BACK BUTTON ACCESS ============ */
+  /* ============ ALLOW NORMAL BACK BUTTON BEHAVIOR ============ */
   useEffect(() => {
     if (!isAuthenticated) return;
 
-    const handlePopState = () => {
-      window.history.pushState(null, "", window.location.href);
-    };
+    // Mark that we're on the KYC flow page
+    sessionStorage.setItem('currentPage', 'kyc-flow');
 
-    window.history.pushState(null, "", window.location.href);
-    window.addEventListener("popstate", handlePopState);
-
-    return () => {
-      window.removeEventListener("popstate", handlePopState);
-    };
+    // Allow natural browser history navigation
+    // No popstate listener needed - browser handles it naturally
+    
   }, [isAuthenticated]);
 
   /* ============ INACTIVITY TIMEOUT ============ */
@@ -110,7 +97,6 @@ function KYCFlow() {
     window.addEventListener("mousemove", resetInactivityTimer);
     window.addEventListener("keypress", resetInactivityTimer);
     window.addEventListener("click", resetInactivityTimer);
-
     resetInactivityTimer();
 
     return () => {
@@ -132,7 +118,6 @@ function KYCFlow() {
       "tokenExpiry",
       "sessionStartTime"
     ];
-
     keysToRemove.forEach(key => {
       try {
         localStorage.removeItem(key);
@@ -140,7 +125,6 @@ function KYCFlow() {
         console.error(`Failed to remove ${key}:`, err);
       }
     });
-
     try {
       sessionStorage.clear();
     } catch (err) {
@@ -177,7 +161,6 @@ function KYCFlow() {
       }
 
       clearAllSessionData();
-      window.history.pushState(null, "", "/");
       navigate("/", { replace: true });
     } catch (err) {
       console.error("Logout error:", err);
@@ -241,7 +224,6 @@ function KYCFlow() {
       {/* Left Sidebar */}
       <aside className="w-64 bg-gradient-to-b from-blue-600 to-blue-500 text-white flex flex-col flex-shrink-0">
         <div className="p-6 text-2xl font-bold">Bank.ly</div>
-
         <nav className="flex-1 px-3">
           <button 
             onClick={handleExplore}
@@ -251,13 +233,11 @@ function KYCFlow() {
             <Search size={20} />
             <span>Explore</span>
           </button>
-
           <button className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-700 w-full text-left mb-1 transition-colors">
             <HelpCircle size={20} />
             <span>Help & Support</span>
           </button>
         </nav>
-
         <div className="px-3 pb-4 space-y-1">
           <button className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-700 w-full text-left transition-colors">
             <Settings size={20} />
@@ -281,7 +261,6 @@ function KYCFlow() {
           <h1 className="text-xl font-semibold">
             {currentStep === 5 ? 'Application Status' : 'Complete your KYC'}
           </h1>
-
           <div className="flex items-center gap-5">
             <button 
               className="text-gray-600 hover:text-blue-600 transition-colors p-2"
@@ -390,7 +369,6 @@ function KYCFlow() {
                       <p className="text-gray-600 text-sm mb-6">
                         Ensure your name and details match your official government ID
                       </p>
-
                       <div className="space-y-4">
                         <div>
                           <label className="block text-sm font-semibold mb-2">Name</label>
@@ -402,7 +380,6 @@ function KYCFlow() {
                             placeholder="Enter your full name"
                           />
                         </div>
-
                         <div>
                           <label className="block text-sm font-semibold mb-2">Date of Birth</label>
                           <input
@@ -412,7 +389,6 @@ function KYCFlow() {
                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
                           />
                         </div>
-
                         <div>
                           <label className="block text-sm font-semibold mb-2">Gender</label>
                           <select
@@ -426,7 +402,6 @@ function KYCFlow() {
                             <option value="other">Other</option>
                           </select>
                         </div>
-
                         <div>
                           <label className="block text-sm font-semibold mb-2">Marital Status</label>
                           <select
@@ -452,7 +427,6 @@ function KYCFlow() {
                       <p className="text-gray-600 text-sm mb-6">
                         Provide active contact details for important account updates and OTPs
                       </p>
-
                       <div className="space-y-4">
                         <div>
                           <label className="block text-sm font-semibold mb-2">Email</label>
@@ -464,7 +438,6 @@ function KYCFlow() {
                             placeholder="Enter your email address"
                           />
                         </div>
-
                         <div>
                           <label className="block text-sm font-semibold mb-2">Contact No.</label>
                           <input
@@ -475,7 +448,6 @@ function KYCFlow() {
                             placeholder="+91 98765 43210"
                           />
                         </div>
-
                         <div>
                           <label className="block text-sm font-semibold mb-2">Emergency Contact</label>
                           <input
@@ -497,7 +469,6 @@ function KYCFlow() {
                       <p className="text-gray-600 text-sm mb-6">
                         Where should we deliver your debit card and cheque book?
                       </p>
-
                       <div className="space-y-4">
                         <div>
                           <label className="block text-sm font-semibold mb-2">Address</label>
@@ -509,7 +480,6 @@ function KYCFlow() {
                             placeholder="Street address, apartment, suite, etc."
                           />
                         </div>
-
                         <div>
                           <label className="block text-sm font-semibold mb-2">City</label>
                           <select
@@ -525,7 +495,6 @@ function KYCFlow() {
                             <option value="chennai">Chennai</option>
                           </select>
                         </div>
-
                         <div>
                           <label className="block text-sm font-semibold mb-2">State</label>
                           <select
@@ -541,7 +510,6 @@ function KYCFlow() {
                             <option value="tamil-nadu">Tamil Nadu</option>
                           </select>
                         </div>
-
                         <div>
                           <label className="block text-sm font-semibold mb-2">Zip / postal code</label>
                           <input
@@ -563,7 +531,6 @@ function KYCFlow() {
                       <p className="text-gray-600 text-sm mb-6">
                         Please fill out the details from your Aadhaar and PAN cards for verification.
                       </p>
-
                       <div className="space-y-6">
                         {/* Aadhaar */}
                         <div>
@@ -652,12 +619,10 @@ function KYCFlow() {
                     </svg>
                   </div>
                 </div>
-
                 <h2 className="text-3xl font-bold mb-4">Application Submitted Successfully</h2>
                 <p className="text-gray-600 mb-8">
                   Thank you for choosing Bank.ly. Your application has been received.
                 </p>
-
                 <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8 text-left rounded">
                   <div className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-yellow-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -671,7 +636,6 @@ function KYCFlow() {
                     </div>
                   </div>
                 </div>
-
                 <button
                   onClick={handleExplore}
                   className="px-10 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition text-lg"
@@ -688,24 +652,3 @@ function KYCFlow() {
 }
 
 export default KYCFlow;
-
-/* ============ FEATURES IMPLEMENTED ============
-
-✅ Icons Restored - Search, HelpCircle, Settings, LogOut
-✅ Explore Button - Navigates to /products even during KYC
-✅ Session Validation - Checks token on mount
-✅ Token Expiry - Validates token hasn't expired
-✅ Back Button Prevention - Blocks browser back button
-✅ Inactivity Timeout - Logs out after 30 mins of no activity
-✅ Proper Logout - Clears session, calls backend, prevents back
-✅ Error Handling - Graceful error messages
-
-============ ROUTE SETUP ============
-
-In your Router:
-<Route path="/kyc-flow" element={<KYCFlow />} />
-<Route path="/products" element={<ProductSelection />} />
-
-When user clicks "Explore" in KYC, they go back to Products page.
-
-*/
