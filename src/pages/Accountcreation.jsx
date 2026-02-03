@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Bell, User, LogOut, Settings, HelpCircle, Search, CheckCircle } from 'lucide-react';
+import HelpSupportModal from './HelpSupportModal';
 
 function AccountCreation() {
   const navigate = useNavigate();
@@ -8,6 +9,7 @@ function AccountCreation() {
   const [selectedAccountType, setSelectedAccountType] = useState(null);
   const [showSuccess, setShowSuccess] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isHelpModalOpen, setIsHelpModalOpen] = useState(false);
 
   /* ============ SESSION VALIDATION ============ */
   useEffect(() => {
@@ -107,7 +109,10 @@ function AccountCreation() {
             <Search size={20} />
             Explore
           </button>
-          <button className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-700 w-full text-left mb-1 transition-colors">
+          <button 
+            onClick={() => setIsHelpModalOpen(true)}
+            className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-700 w-full text-left mb-1 transition-colors"
+          >
             <HelpCircle size={20} />
             Help & Support
           </button>
@@ -287,6 +292,12 @@ function AccountCreation() {
           </div>
         </main>
       </div>
+
+      {/* Help & Support Modal */}
+      <HelpSupportModal 
+        isOpen={isHelpModalOpen} 
+        onClose={() => setIsHelpModalOpen(false)} 
+      />
     </div>
   );
 }

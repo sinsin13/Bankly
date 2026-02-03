@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Bell, User, Lock, CheckCircle, Search, HelpCircle, Settings, LogOut } from "lucide-react";
+import HelpSupportModal from './HelpSupportModal';
 
 /* -------------------- KYC CONFIG -------------------- */
 const KYC_CONFIG = {
@@ -40,6 +41,7 @@ function ProductSelection() {
   const [isLoading, setIsLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [error, setError] = useState(null);
+  const [isHelpModalOpen, setIsHelpModalOpen] = useState(false);
 
   /* ============ SESSION VALIDATION & INITIALIZATION ============ */
   useEffect(() => {
@@ -261,6 +263,7 @@ function ProductSelection() {
             Explore
           </button>
           <button 
+            onClick={() => setIsHelpModalOpen(true)}
             className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-700 w-full text-left font-medium transition-colors"
             aria-label="Help and support"
           >
@@ -405,6 +408,12 @@ function ProductSelection() {
           </div>
         </main>
       </div>
+
+      {/* Help & Support Modal */}
+      <HelpSupportModal 
+        isOpen={isHelpModalOpen} 
+        onClose={() => setIsHelpModalOpen(false)} 
+      />
     </div>
   );
 }

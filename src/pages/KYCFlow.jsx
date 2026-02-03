@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Bell, User, LogOut, Settings, HelpCircle, Search } from 'lucide-react';
+import HelpSupportModal from './HelpSupportModal';
 
 function KYCFlow() {
   const navigate = useNavigate();
@@ -8,6 +9,7 @@ function KYCFlow() {
   const [isLoading, setIsLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [error, setError] = useState(null);
+  const [isHelpModalOpen, setIsHelpModalOpen] = useState(false);
 
   // Get user name from localStorage
   const userName = localStorage.getItem('userName') || 'User';
@@ -233,7 +235,10 @@ function KYCFlow() {
             <Search size={20} />
             <span>Explore</span>
           </button>
-          <button className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-700 w-full text-left mb-1 transition-colors">
+          <button 
+            onClick={() => setIsHelpModalOpen(true)}
+            className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-700 w-full text-left mb-1 transition-colors"
+          >
             <HelpCircle size={20} />
             <span>Help & Support</span>
           </button>
@@ -647,6 +652,12 @@ function KYCFlow() {
           )}
         </main>
       </div>
+
+      {/* Help & Support Modal */}
+      <HelpSupportModal 
+        isOpen={isHelpModalOpen} 
+        onClose={() => setIsHelpModalOpen(false)} 
+      />
     </div>
   );
 }
