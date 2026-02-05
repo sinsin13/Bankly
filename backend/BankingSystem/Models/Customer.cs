@@ -21,8 +21,8 @@ namespace BankingSystem.Models
             [Required]
             public string PasswordHash { get; set; } = string.Empty;
 
-            [Required]
-            public DateTime Dob { get; set; }
+            //[Required]
+            public DateTime? Dob { get; set; }
 
             [MaxLength(250)]
             public string Address { get; set; }

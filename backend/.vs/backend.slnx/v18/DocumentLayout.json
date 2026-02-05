@@ -1,0 +1,544 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Controllers\\KycController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Controllers\\KycController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Auth\\RegisterCustomerDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\DTOs\\Auth\\RegisterCustomerDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Kyc\\KycService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Services\\Kyc\\KycService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Accounts\\AccountService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Services\\Accounts\\AccountService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Kyc\\SubmitKycDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\DTOs\\Kyc\\SubmitKycDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Kyc\\KycResponseDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\DTOs\\Kyc\\KycResponseDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Models\\Kyc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Models\\Kyc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Models\\Customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Models\\Customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Models\\Account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Models\\Account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Auth\\AuthService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Services\\Auth\\AuthService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Auth\\AuthResponseDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\DTOs\\Auth\\AuthResponseDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Controllers\\AdminController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Controllers\\AdminController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Admin\\AdminService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Services\\Admin\\AdminService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Admin\\IAdminService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Services\\Admin\\IAdminService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Accounts\\IAccountService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Services\\Accounts\\IAccountService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Controllers\\AccountsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Controllers\\AccountsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Account\\CreateAccountDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\DTOs\\Account\\CreateAccountDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Admin\\AdminStatsDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\DTOs\\Admin\\AdminStatsDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Auth\\LoginDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\DTOs\\Auth\\LoginDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Account\\AccountResponseDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\DTOs\\Account\\AccountResponseDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Infrastructure\\BankingDbContext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Infrastructure\\BankingDbContext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Transfers\\TransferResponseDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\DTOs\\Transfers\\TransferResponseDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Transfers\\TransferRequestDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\DTOs\\Transfers\\TransferRequestDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Transaction\\WithdrawTransactionDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\DTOs\\Transaction\\WithdrawTransactionDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Transaction\\TransactionResponseDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\DTOs\\Transaction\\TransactionResponseDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Transaction\\DepositTransactionDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\DTOs\\Transaction\\DepositTransactionDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Kyc\\IKycService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BankingSystem\\Services\\Kyc\\IKycService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Accounts\\AccountService.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Services\\Accounts\\AccountService.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Accounts\\AccountService.cs",
+              "RelativeToolTip": "BankingSystem\\Services\\Accounts\\AccountService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAGcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T15:39:01.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KycService.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Kyc\\KycService.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Services\\Kyc\\KycService.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Kyc\\KycService.cs",
+              "RelativeToolTip": "BankingSystem\\Services\\Kyc\\KycService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T10:50:35.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KycController.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Controllers\\KycController.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Controllers\\KycController.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Controllers\\KycController.cs",
+              "RelativeToolTip": "BankingSystem\\Controllers\\KycController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T06:46:36.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SubmitKycDto.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Kyc\\SubmitKycDto.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Kyc\\SubmitKycDto.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Kyc\\SubmitKycDto.cs",
+              "RelativeToolTip": "BankingSystem\\DTOs\\Kyc\\SubmitKycDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T10:35:16.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegisterCustomerDto.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Auth\\RegisterCustomerDto.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Auth\\RegisterCustomerDto.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Auth\\RegisterCustomerDto.cs",
+              "RelativeToolTip": "BankingSystem\\DTOs\\Auth\\RegisterCustomerDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:15:23.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "KycResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Kyc\\KycResponseDto.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Kyc\\KycResponseDto.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Kyc\\KycResponseDto.cs",
+              "RelativeToolTip": "BankingSystem\\DTOs\\Kyc\\KycResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T10:56:46.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Kyc.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Models\\Kyc.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Models\\Kyc.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Models\\Kyc.cs",
+              "RelativeToolTip": "BankingSystem\\Models\\Kyc.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAYwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T17:17:21.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Models\\Customer.cs",
+              "RelativeToolTip": "BankingSystem\\Models\\Customer.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T15:41:35.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Account.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Models\\Account.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Models\\Account.cs",
+              "RelativeToolTip": "BankingSystem\\Models\\Account.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAADwvyoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:55:23.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Auth\\AuthService.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Services\\Auth\\AuthService.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Auth\\AuthService.cs",
+              "RelativeToolTip": "BankingSystem\\Services\\Auth\\AuthService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAqwCMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T08:19:26.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "BankingSystem\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T14:53:10.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AuthResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Auth\\AuthResponseDto.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Auth\\AuthResponseDto.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Auth\\AuthResponseDto.cs",
+              "RelativeToolTip": "BankingSystem\\DTOs\\Auth\\AuthResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:15:18.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "BankingSystem\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:23:14.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Admin\\AdminService.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Services\\Admin\\AdminService.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Admin\\AdminService.cs",
+              "RelativeToolTip": "BankingSystem\\Services\\Admin\\AdminService.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAowFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:22:27.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IAdminService.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Admin\\IAdminService.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Services\\Admin\\IAdminService.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Admin\\IAdminService.cs",
+              "RelativeToolTip": "BankingSystem\\Services\\Admin\\IAdminService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:20:59.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IAccountService.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Accounts\\IAccountService.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Services\\Accounts\\IAccountService.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Accounts\\IAccountService.cs",
+              "RelativeToolTip": "BankingSystem\\Services\\Accounts\\IAccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:18:29.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CreateAccountDto.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Account\\CreateAccountDto.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Account\\CreateAccountDto.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Account\\CreateAccountDto.cs",
+              "RelativeToolTip": "BankingSystem\\DTOs\\Account\\CreateAccountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:15:15.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Controllers\\AccountsController.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "BankingSystem\\Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T16:30:19.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AdminStatsDto.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Admin\\AdminStatsDto.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Admin\\AdminStatsDto.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Admin\\AdminStatsDto.cs",
+              "RelativeToolTip": "BankingSystem\\DTOs\\Admin\\AdminStatsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:16:54.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Auth\\LoginDto.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Auth\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Auth\\LoginDto.cs",
+              "RelativeToolTip": "BankingSystem\\DTOs\\Auth\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:15:21.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AccountResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Account\\AccountResponseDto.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Account\\AccountResponseDto.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Account\\AccountResponseDto.cs",
+              "RelativeToolTip": "BankingSystem\\DTOs\\Account\\AccountResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:15:12.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "BankingSystem\\appsettings.json",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\appsettings.json",
+              "RelativeToolTip": "BankingSystem\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-02T16:03:50.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Program.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Program.cs",
+              "RelativeToolTip": "BankingSystem\\Program.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAADwv1sAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:23:53.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BankingDbContext .cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Infrastructure\\BankingDbContext .cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Infrastructure\\BankingDbContext .cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Infrastructure\\BankingDbContext .cs",
+              "RelativeToolTip": "BankingSystem\\Infrastructure\\BankingDbContext .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:40:58.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "TransferResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Transfers\\TransferResponseDto.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Transfers\\TransferResponseDto.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Transfers\\TransferResponseDto.cs",
+              "RelativeToolTip": "BankingSystem\\DTOs\\Transfers\\TransferResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:15:42.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "TransferRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Transfers\\TransferRequestDto.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Transfers\\TransferRequestDto.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Transfers\\TransferRequestDto.cs",
+              "RelativeToolTip": "BankingSystem\\DTOs\\Transfers\\TransferRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:15:39.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "WithdrawTransactionDto.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Transaction\\WithdrawTransactionDto.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Transaction\\WithdrawTransactionDto.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Transaction\\WithdrawTransactionDto.cs",
+              "RelativeToolTip": "BankingSystem\\DTOs\\Transaction\\WithdrawTransactionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:15:37.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "TransactionResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Transaction\\TransactionResponseDto.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Transaction\\TransactionResponseDto.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Transaction\\TransactionResponseDto.cs",
+              "RelativeToolTip": "BankingSystem\\DTOs\\Transaction\\TransactionResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:15:34.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "DepositTransactionDto.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Transaction\\DepositTransactionDto.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Transaction\\DepositTransactionDto.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\DTOs\\Transaction\\DepositTransactionDto.cs",
+              "RelativeToolTip": "BankingSystem\\DTOs\\Transaction\\DepositTransactionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:15:31.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IKycService.cs",
+              "DocumentMoniker": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Kyc\\IKycService.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Services\\Kyc\\IKycService.cs",
+              "ToolTip": "C:\\Users\\ashwi\\source\\repos\\mini_bank\\Bankly\\Bankly\\backend\\BankingSystem\\Services\\Kyc\\IKycService.cs",
+              "RelativeToolTip": "BankingSystem\\Services\\Kyc\\IKycService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T10:46:32.796Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

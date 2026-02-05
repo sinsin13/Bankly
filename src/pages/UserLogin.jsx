@@ -36,12 +36,22 @@ function UserLogin() {
       localStorage.setItem('role', role);
       localStorage.setItem('expiresAt', expiration);
 
-      // // ✅ Redirect based on role
-      // if (role === 'Admin') {
-      //   navigate('/admin/dashboard');
-      // } else {
-      navigate('/product-selection'); // or /product-selection based on your flow
-      // }
+      // ✅ IMPORTANT: decide redirect based on backend data
+      const accountsResponse = await api.get('/Accounts', {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+
+      const accounts = accountsResponse.data;
+
+      if (accounts && accounts.length > 0) {
+        // ✅ User already has account → dashboard
+        navigate('/user/dashboard', { replace: true });
+      } else {
+        // ✅ No account yet → product selection
+        navigate('/product-selection', { replace: true });
+      }
 
     } catch (err) {
       setError(

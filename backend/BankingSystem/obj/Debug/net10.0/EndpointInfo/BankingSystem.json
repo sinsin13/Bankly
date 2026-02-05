@@ -143,6 +143,52 @@
         }
       }
     },
+    "/api/Admin/dashboard/stats": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/accounts": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/kyc": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "Submitted"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Auth/register": {
       "post": {
         "tags": [
@@ -498,7 +544,6 @@
           "name",
           "email",
           "password",
-          "dob",
           "address"
         ],
         "type": "object",
@@ -512,10 +557,6 @@
           "password": {
             "minLength": 6,
             "type": "string"
-          },
-          "dob": {
-            "type": "string",
-            "format": "date-time"
           },
           "address": {
             "type": "string"
@@ -536,6 +577,10 @@
           },
           "addressProof": {
             "type": "string"
+          },
+          "dob": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
@@ -590,6 +635,9 @@
   "tags": [
     {
       "name": "Accounts"
+    },
+    {
+      "name": "Admin"
     },
     {
       "name": "Auth"

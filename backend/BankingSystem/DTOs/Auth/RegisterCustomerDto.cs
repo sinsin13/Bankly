@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace BankingSystem.DTOs.Auth
 {
@@ -16,8 +17,8 @@ namespace BankingSystem.DTOs.Auth
         [MinLength(6)]
         public string Password { get; set; } = string.Empty;
 
-        [Required]
-        public DateTime Dob { get; set; }
+        //[JsonIgnore]
+        //public DateTime Dob { get; set; }
 
         [Required]
         public string Address { get; set; } = string.Empty;

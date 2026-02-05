@@ -90,6 +90,42 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BankingSystem.Controllers.AdminController",
+    "Method": "GetAllAccounts",
+    "RelativePath": "api/Admin/accounts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankingSystem.Controllers.AdminController",
+    "Method": "GetDashboardStats",
+    "RelativePath": "api/Admin/dashboard/stats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BankingSystem.Controllers.AdminController",
+    "Method": "GetKycsByStatus",
+    "RelativePath": "api/Admin/kyc",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BankingSystem.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",

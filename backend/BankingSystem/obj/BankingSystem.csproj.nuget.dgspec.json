@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Bankly\\backend\\BankingSystem\\BankingSystem.csproj": {}
+    "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\BankingSystem.csproj": {}
   },
   "projects": {
-    "E:\\Bankly\\backend\\BankingSystem\\BankingSystem.csproj": {
+    "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\BankingSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Bankly\\backend\\BankingSystem\\BankingSystem.csproj",
+        "projectUniqueName": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\BankingSystem.csproj",
         "projectName": "BankingSystem",
-        "projectPath": "E:\\Bankly\\backend\\BankingSystem\\BankingSystem.csproj",
+        "projectPath": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\BankingSystem.csproj",
         "packagesPath": "C:\\Users\\Vikas Prajapati\\.nuget\\packages\\",
-        "outputPath": "E:\\Bankly\\backend\\BankingSystem\\obj\\",
+        "outputPath": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

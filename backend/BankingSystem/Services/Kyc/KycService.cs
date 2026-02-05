@@ -29,6 +29,7 @@ namespace BankingSystem.Services.Kyc
                 AadhaarNumber = dto.AadhaarNumber,
                 PanNumber = dto.PanNumber,
                 AddressProof = dto.AddressProof,
+                Dob = dto.Dob
             };
 
             _context.Kycs.Add(kyc);
@@ -42,8 +43,16 @@ namespace BankingSystem.Services.Kyc
             var kyc = await _context.Kycs
                 .FirstOrDefaultAsync(x => x.CustomerId == customerId);
 
+            // ✅ No exception
             if (kyc == null)
-                throw new Exception("KYC not submitted");
+            {
+                return new KycResponseDto
+                {
+                    Status = "NotStarted",
+                    SubmittedAt = DateTime.MinValue,
+                    AdminRemarks = null
+                };
+            }
 
             return new KycResponseDto
             {

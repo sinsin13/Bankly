@@ -37,7 +37,7 @@ namespace BankingSystem.Services.Accounts
                 CustomerId = customerId,
                 AccountNumber = accountNumber,
                 Type = dto.AccountType,
-                Balance = 0,
+                Balance = 20000,
                 Status = "Active",
                 CreatedDate = DateTime.UtcNow
             };
@@ -107,6 +107,7 @@ namespace BankingSystem.Services.Accounts
                 Status = account.Status,
                 CreatedDate = account.CreatedDate,
                 AccountHolderName = account.Customer.Name
+
             };
         }
 

@@ -1,19 +1,26 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Bell, User, LogOut, Settings, HelpCircle, Search, CheckCircle } from 'lucide-react';
+import api from '../services/api';
 
 function AccountCreation() {
   const navigate = useNavigate();
   const userName = localStorage.getItem('userName') || 'User';
   const [selectedAccountType, setSelectedAccountType] = useState(null);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [createdAccount, setCreatedAccount] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleLogout = () => {
-    localStorage.removeItem("userToken");
-    localStorage.removeItem("userName");
-    localStorage.removeItem("userPhone");
-    localStorage.removeItem("customerId");
-    localStorage.removeItem("kycStatus");
+    [
+      "userToken",
+      "token",
+      "userName",
+      "userPhone",
+      "customerId",
+      "kycStatus"
+    ].forEach(k => localStorage.removeItem(k));
+
     navigate("/");
   };
 
@@ -23,44 +30,81 @@ function AccountCreation() {
 
   const handleSubmit = async () => {
     if (!selectedAccountType) {
-      alert('Please select an account type');
+      alert("Please select an account type");
       return;
     }
 
-    // TODO: Send account creation request to backend
-    // const response = await api.post('/create-account', { accountType: selectedAccountType });
-    
-    console.log('Creating account:', selectedAccountType);
-    
-    // Show success modal
-    setShowSuccess(true);
-    
-    // Redirect after 3 seconds
-    setTimeout(() => {
-      navigate('/user/dashboard');
-    }, 3000);
+    try {
+      setIsSubmitting(true);
+
+      const token = localStorage.getItem("token") || localStorage.getItem("userToken");
+
+      if (!token) {
+        alert("Session expired. Please login again.");
+        navigate("/user-login");
+        return;
+      }
+
+      const backendAccountType =
+        selectedAccountType === "savings" ? "Savings" : "Current";
+
+      const response = await api.post(
+        "/Accounts",
+        { accountType: backendAccountType },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        }
+      );
+
+      setCreatedAccount(response.data);
+      setShowSuccess(true);
+
+      setTimeout(() => {
+        navigate("/user/dashboard");
+      }, 3000);
+
+    } catch (error) {
+      console.error("Account creation failed:", error);
+
+      alert(
+        error.response?.data ||
+        "Account creation failed. Please ensure your KYC is approved."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className="min-h-screen bg-gray-50 flex">
       {/* Success Modal */}
-      {showSuccess && (
+      {showSuccess && createdAccount && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-2xl p-10 max-w-md text-center shadow-2xl">
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="w-12 h-12 text-green-600" />
             </div>
-            <h2 className="text-3xl font-bold mb-4">Account Created Successfully!</h2>
+
+            <h2 className="text-3xl font-bold mb-4">
+              Account Created Successfully!
+            </h2>
+
             <p className="text-gray-600 mb-6">
-              Your {selectedAccountType === 'savings' ? 'Savings' : 'Current'} Account has been created.
+              Your {createdAccount.type} Account has been created.
             </p>
+
             <div className="bg-blue-50 p-4 rounded-lg mb-6">
               <p className="text-sm text-gray-600">Account Number</p>
               <p className="text-2xl font-bold text-blue-600">
-                {Math.floor(10000000000 + Math.random() * 90000000000)}
+                {createdAccount.accountNumber}
               </p>
             </div>
-            <p className="text-sm text-gray-500">Redirecting to dashboard...</p>
+
+            <p className="text-sm text-gray-500">
+              Redirecting to dashboard...
+            </p>
           </div>
         </div>
       )}

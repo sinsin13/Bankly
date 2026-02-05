@@ -172,178 +172,351 @@ C:\Users\kisla\OneDrive - iitjammu.ac.in\Desktop\Perceptive Analysis\Banking_Min
 C:\Users\kisla\OneDrive - iitjammu.ac.in\Desktop\Perceptive Analysis\Banking_Mini_Project\BankingSystem\BankingSystem\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\kisla\OneDrive - iitjammu.ac.in\Desktop\Perceptive Analysis\Banking_Mini_Project\BankingSystem\BankingSystem\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\kisla\OneDrive - iitjammu.ac.in\Desktop\Perceptive Analysis\Banking_Mini_Project\BankingSystem\BankingSystem\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\appsettings.Development.json
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\appsettings.json
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.staticwebassets.endpoints.json
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.exe
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.deps.json
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.runtimeconfig.json
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.pdb
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\AutoMapper.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Azure.Core.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Azure.Identity.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\FluentValidation.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\FluentValidation.AspNetCore.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Humanizer.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Build.Framework.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Data.SqlClient.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Identity.Client.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.OpenApi.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Mono.TextTemplating.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Newtonsoft.Json.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.AspNetCore.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Extensions.Hosting.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Extensions.Logging.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Formatting.Compact.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Settings.Configuration.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Sinks.Console.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Sinks.Debug.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Sinks.File.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.ClientModel.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.CodeDom.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Composition.AttributedModel.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Composition.Convention.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Composition.Hosting.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Composition.Runtime.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Composition.TypedParts.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Memory.Data.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.Data.SqlClient.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.Data.SqlClient.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.Data.SqlClient.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.Data.SqlClient.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.Data.SqlClient.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.Data.SqlClient.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.Data.SqlClient.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.Data.SqlClient.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.Data.SqlClient.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.Data.SqlClient.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-E:\Bankly\backend\BankingSystem\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.csproj.AssemblyReference.cache
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\rpswa.dswa.cache.json
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.GeneratedMSBuildEditorConfig.editorconfig
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.AssemblyInfoInputs.cache
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.AssemblyInfo.cs
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.csproj.CoreCompileInputs.cache
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.MvcApplicationPartsAssemblyInfo.cs
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.MvcApplicationPartsAssemblyInfo.cache
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.sourcelink.json
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\rjimswa.dswa.cache.json
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\scopedcss\bundle\BankingSystem.styles.css
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\staticwebassets.build.json
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\staticwebassets.build.json.cache
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\staticwebassets.development.json
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\staticwebassets.build.endpoints.json
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\swae.build.ex.cache
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingS.A12E54A2.Up2Date
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.dll
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\refint\BankingSystem.dll
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.pdb
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.genruntimeconfig.cache
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\ref\BankingSystem.dll
-E:\Bankly\backend\BankingSystem\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.csproj.AssemblyReference.cache
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.AssemblyInfoInputs.cache
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.AssemblyInfo.cs
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.csproj.CoreCompileInputs.cache
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\appsettings.Development.json
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\appsettings.json
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.staticwebassets.endpoints.json
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.exe
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.deps.json
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.runtimeconfig.json
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.pdb
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\AutoMapper.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Azure.Core.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Azure.Identity.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\FluentValidation.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\FluentValidation.AspNetCore.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Humanizer.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Build.Framework.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Data.SqlClient.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Identity.Client.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.OpenApi.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Mono.TextTemplating.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Newtonsoft.Json.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.AspNetCore.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Extensions.Hosting.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Extensions.Logging.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Formatting.Compact.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Settings.Configuration.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Sinks.Console.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Sinks.Debug.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Sinks.File.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.ClientModel.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.CodeDom.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Composition.AttributedModel.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Composition.Convention.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Composition.Hosting.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Composition.Runtime.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Composition.TypedParts.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Memory.Data.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\rjimswa.dswa.cache.json
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\scopedcss\bundle\BankingSystem.styles.css
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\staticwebassets.build.json.cache
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\staticwebassets.development.json
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\swae.build.ex.cache
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingS.A12E54A2.Up2Date
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\refint\BankingSystem.dll
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.pdb
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.genruntimeconfig.cache
+C:\Users\ashwi\source\repos\mini_bank\Bankly\Bankly\backend\BankingSystem\obj\Debug\net10.0\ref\BankingSystem.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\appsettings.Development.json
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\appsettings.json
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.staticwebassets.endpoints.json
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.exe
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.deps.json
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.runtimeconfig.json
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\BankingSystem.pdb
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\AutoMapper.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Azure.Core.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Azure.Identity.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\FluentValidation.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\FluentValidation.AspNetCore.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Humanizer.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Build.Framework.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Data.SqlClient.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Identity.Client.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.OpenApi.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Mono.TextTemplating.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Newtonsoft.Json.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.AspNetCore.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Extensions.Hosting.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Extensions.Logging.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Formatting.Compact.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Settings.Configuration.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Sinks.Console.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Sinks.Debug.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\Serilog.Sinks.File.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.ClientModel.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.CodeDom.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Composition.AttributedModel.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Composition.Convention.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Composition.Hosting.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Composition.Runtime.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Composition.TypedParts.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Memory.Data.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\cs\Microsoft.Data.SqlClient.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\de\Microsoft.Data.SqlClient.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\es\Microsoft.Data.SqlClient.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\fr\Microsoft.Data.SqlClient.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\it\Microsoft.Data.SqlClient.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ja\Microsoft.Data.SqlClient.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ko\Microsoft.Data.SqlClient.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\pl\Microsoft.Data.SqlClient.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\ru\Microsoft.Data.SqlClient.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\tr\Microsoft.Data.SqlClient.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.csproj.AssemblyReference.cache
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\rpswa.dswa.cache.json
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.GeneratedMSBuildEditorConfig.editorconfig
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.AssemblyInfoInputs.cache
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.AssemblyInfo.cs
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.csproj.CoreCompileInputs.cache
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.MvcApplicationPartsAssemblyInfo.cs
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.MvcApplicationPartsAssemblyInfo.cache
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.sourcelink.json
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\rjimswa.dswa.cache.json
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\scopedcss\bundle\BankingSystem.styles.css
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\staticwebassets.build.json
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\staticwebassets.build.json.cache
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\staticwebassets.development.json
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\swae.build.ex.cache
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingS.A12E54A2.Up2Date
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\refint\BankingSystem.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.pdb
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\BankingSystem.genruntimeconfig.cache
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\ref\BankingSystem.dll
+E:\integration safe copy\Bankly\backend\BankingSystem\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

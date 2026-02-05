@@ -1,29 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Bankly\\backend\\",
+  "WorkspaceRootPath": "E:\\integration safe copy\\Bankly\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|e:\\bankly\\backend\\bankingsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|e:\\integration safe copy\\bankly\\backend\\bankingsystem\\services\\accounts\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|solutionrelative:bankingsystem\\services\\accounts\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|e:\\integration safe copy\\bankly\\backend\\bankingsystem\\services\\kyc\\kycservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|solutionrelative:bankingsystem\\services\\kyc\\kycservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|e:\\integration safe copy\\bankly\\backend\\bankingsystem\\models\\kyc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|solutionrelative:bankingsystem\\models\\kyc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|e:\\integration safe copy\\bankly\\backend\\bankingsystem\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|solutionrelative:bankingsystem\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|e:\\integration safe copy\\bankly\\backend\\bankingsystem\\services\\kyc\\ikycservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|solutionrelative:bankingsystem\\services\\kyc\\ikycservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|e:\\integration safe copy\\bankly\\backend\\bankingsystem\\dtos\\account\\accountresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|solutionrelative:bankingsystem\\dtos\\account\\accountresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|e:\\integration safe copy\\bankly\\backend\\bankingsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|solutionrelative:bankingsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|e:\\bankly\\backend\\bankingsystem\\dtos\\auth\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|solutionrelative:bankingsystem\\dtos\\auth\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|e:\\bankly\\backend\\bankingsystem\\bankingsystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|solutionrelative:bankingsystem\\bankingsystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|e:\\bankly\\backend\\bankingsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|e:\\integration safe copy\\bankly\\backend\\bankingsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|solutionrelative:bankingsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|e:\\bankly\\backend\\bankingsystem\\bankingsystem.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|solutionrelative:bankingsystem\\bankingsystem.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|e:\\bankly\\backend\\bankingsystem\\dtos\\account\\createaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|e:\\integration safe copy\\bankly\\backend\\bankingsystem\\dtos\\account\\createaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{191C6CD7-760F-FA5B-48E0-D59B0875DBC1}|BankingSystem\\BankingSystem.csproj|solutionrelative:bankingsystem\\dtos\\account\\createaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,77 +46,112 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BankingSystem.csproj",
-              "DocumentMoniker": "E:\\Bankly\\backend\\BankingSystem\\BankingSystem.csproj",
-              "RelativeDocumentMoniker": "BankingSystem\\BankingSystem.csproj",
-              "ToolTip": "E:\\Bankly\\backend\\BankingSystem\\BankingSystem.csproj",
-              "RelativeToolTip": "BankingSystem\\BankingSystem.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-02-02T09:14:12.318Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BankingSystem.http",
-              "DocumentMoniker": "E:\\Bankly\\backend\\BankingSystem\\BankingSystem.http",
-              "RelativeDocumentMoniker": "BankingSystem\\BankingSystem.http",
-              "ToolTip": "E:\\Bankly\\backend\\BankingSystem\\BankingSystem.http",
-              "RelativeToolTip": "BankingSystem\\BankingSystem.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-02-02T09:09:33.594Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Bankly\\backend\\BankingSystem\\Program.cs",
-              "RelativeDocumentMoniker": "BankingSystem\\Program.cs",
-              "ToolTip": "E:\\Bankly\\backend\\BankingSystem\\Program.cs",
-              "RelativeToolTip": "BankingSystem\\Program.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "KycService.cs",
+              "DocumentMoniker": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\Services\\Kyc\\KycService.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Services\\Kyc\\KycService.cs",
+              "ToolTip": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\Services\\Kyc\\KycService.cs",
+              "RelativeToolTip": "BankingSystem\\Services\\Kyc\\KycService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAqwDYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T06:58:34.859Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T11:40:53.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Kyc.cs",
+              "DocumentMoniker": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\Models\\Kyc.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Models\\Kyc.cs",
+              "ToolTip": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\Models\\Kyc.cs",
+              "RelativeToolTip": "BankingSystem\\Models\\Kyc.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T11:50:48.949Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\Bankly\\backend\\BankingSystem\\appsettings.json",
-              "RelativeDocumentMoniker": "BankingSystem\\appsettings.json",
-              "ToolTip": "E:\\Bankly\\backend\\BankingSystem\\appsettings.json",
-              "RelativeToolTip": "BankingSystem\\appsettings.json",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAcwBsAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-02T06:46:44.907Z"
+              "Title": "Account.cs",
+              "DocumentMoniker": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Models\\Account.cs",
+              "ToolTip": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\Models\\Account.cs",
+              "RelativeToolTip": "BankingSystem\\Models\\Account.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T11:50:47.17Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "E:\\Bankly\\backend\\BankingSystem\\DTOs\\Auth\\LoginDto.cs",
-              "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Auth\\LoginDto.cs",
-              "ToolTip": "E:\\Bankly\\backend\\BankingSystem\\DTOs\\Auth\\LoginDto.cs",
-              "RelativeToolTip": "BankingSystem\\DTOs\\Auth\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\Services\\Accounts\\AccountService.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Services\\Accounts\\AccountService.cs",
+              "ToolTip": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\Services\\Accounts\\AccountService.cs",
+              "RelativeToolTip": "BankingSystem\\Services\\Accounts\\AccountService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T06:31:45.383Z",
+              "WhenOpened": "2026-02-04T11:06:27.898Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IKycService.cs",
+              "DocumentMoniker": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\Services\\Kyc\\IKycService.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Services\\Kyc\\IKycService.cs",
+              "ToolTip": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\Services\\Kyc\\IKycService.cs",
+              "RelativeToolTip": "BankingSystem\\Services\\Kyc\\IKycService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T10:59:50.254Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "AccountResponseDto.cs",
+              "DocumentMoniker": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\DTOs\\Account\\AccountResponseDto.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Account\\AccountResponseDto.cs",
+              "ToolTip": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\DTOs\\Account\\AccountResponseDto.cs",
+              "RelativeToolTip": "BankingSystem\\DTOs\\Account\\AccountResponseDto.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T10:47:35.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\Program.cs",
+              "RelativeDocumentMoniker": "BankingSystem\\Program.cs",
+              "ToolTip": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\Program.cs",
+              "RelativeToolTip": "BankingSystem\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T10:13:41.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "BankingSystem\\appsettings.json",
+              "ToolTip": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\appsettings.json",
+              "RelativeToolTip": "BankingSystem\\appsettings.json",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAcwB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-04T10:13:25.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "CreateAccountDto.cs",
-              "DocumentMoniker": "E:\\Bankly\\backend\\BankingSystem\\DTOs\\Account\\CreateAccountDto.cs",
+              "DocumentMoniker": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\DTOs\\Account\\CreateAccountDto.cs",
               "RelativeDocumentMoniker": "BankingSystem\\DTOs\\Account\\CreateAccountDto.cs",
-              "ToolTip": "E:\\Bankly\\backend\\BankingSystem\\DTOs\\Account\\CreateAccountDto.cs",
+              "ToolTip": "E:\\integration safe copy\\Bankly\\backend\\BankingSystem\\DTOs\\Account\\CreateAccountDto.cs",
               "RelativeToolTip": "BankingSystem\\DTOs\\Account\\CreateAccountDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

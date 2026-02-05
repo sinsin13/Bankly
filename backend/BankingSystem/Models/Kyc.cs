@@ -18,7 +18,10 @@ namespace BankingSystem.Models
         public string PanNumber { get; set; } = string.Empty;      // Tax ID
 
         [Required]
-        public string AddressProof { get; set; } = string.Empty;   
+        public string AddressProof { get; set; } = string.Empty;
+
+        [Required]
+        public DateTime Dob { get; set; }
 
         public string Status { get; set; } = "Submitted";          // Submitted, Approved, Rejected
         public DateTime SubmittedAt { get; set; } = DateTime.UtcNow;

@@ -33,7 +33,7 @@ namespace BankingSystem.Services.Auth
                 Name = registerDto.Name,
                 Email = registerDto.Email,
                 PasswordHash = _passwordHasher.HashPassword(registerDto.Password),
-                Dob = registerDto.Dob,
+                Dob = null,
                 Address = registerDto.Address,
                 Status = "Pending",     // Admin can approve later
                 Role = "Customer"       // Default role

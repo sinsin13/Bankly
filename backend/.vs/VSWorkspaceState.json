@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BankingSystem",
+    "\\BankingSystem\\DTOs",
+    "\\BankingSystem\\DTOs\\Auth",
+    "\\BankingSystem\\Models",
+    "\\BankingSystem\\Services",
+    "\\BankingSystem\\Services\\Accounts",
+    "\\BankingSystem\\Services\\Admin",
+    "\\BankingSystem\\Services\\Auth",
+    "\\BankingSystem\\Services\\Kyc"
+  ],
+  "SelectedNode": "\\BankingSystem\\Controllers\\KycController.cs",
+  "PreviewInSolutionExplorer": false
+}

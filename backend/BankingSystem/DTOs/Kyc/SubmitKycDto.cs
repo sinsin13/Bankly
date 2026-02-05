@@ -6,5 +6,6 @@
         public string AadhaarNumber { get; set; } = string.Empty;
         public string PanNumber { get; set; } = string.Empty;
         public string AddressProof { get; set; } = string.Empty;
+        public DateTime Dob { get; set; }
     }
 }
